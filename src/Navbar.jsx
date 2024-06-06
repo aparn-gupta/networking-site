@@ -14,10 +14,28 @@ import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
+import Messenger from './messenger';
 
 
 
 const Navbar = () => {
+
+  
+
+  const [showMessenger, setShowMessenger] = React.useState(false)
+
+  const MessengerBox = showMessenger ?  <div> <Messenger />  </div>  : <div></div> 
+
+
+  const handleClick = () =>  {
+    setShowMessenger(prev => !prev)
+  }
+
+
+
+
+
+
   return (
     <div className='p-4 flex justify-between shadow-md bg-white'>
       <div className='flex justify-between'> 
@@ -44,8 +62,10 @@ const Navbar = () => {
 
 
       <div className='flex justify-between'>
-        <IconButton className='h-14 w-14' >  <MessageIcon sx = {{fontSize: 30}}  className='text-black'/>  </IconButton>
-        <IconButton className='h-14 w-14'>  <NotificationsIcon sx = {{fontSize: 30}} className='text-black'  />  </IconButton>
+       
+        <IconButton className='h-14 w-14'  onClick={handleClick}  >  <MessageIcon    sx = {{fontSize: 30}}  className='text-black'/>  </IconButton>
+        <div className=''> {MessengerBox}  </div>
+        <IconButton className='h-14 w-14'> <NotificationsIcon sx = {{fontSize: 30}} className='text-black'  />  </IconButton>
         <IconButton className='h-14 w-14'>  <MenuIcon sx = {{fontSize: 30}} className='text-black' />  </IconButton>
         <IconButton className='h-14 w-14'>  <Avatar src='https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg'  />  </IconButton>
       </div>

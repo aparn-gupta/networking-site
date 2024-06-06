@@ -1,15 +1,27 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import Stories from './Stories'
+import Postform from './postform'
+
 
 const Home = () => {
+
+
+
+
+
   return (
     <div>
 
-<div className="flex  ">
-            <Sidebar />
-            <Stories />
-          </div>
+      <div className="flex"  id="popupbox"  >
+
+      <Sidebar />
+      <Stories />
+      </div>
+
+    
+
+
 
       
     </div>

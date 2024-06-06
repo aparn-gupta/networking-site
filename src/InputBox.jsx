@@ -3,34 +3,39 @@ import React from 'react'
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import PhotoIcon from '@mui/icons-material/Photo';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import { useState } from 'react';
 import Postform from './postform';
 
+
+
+export const formContext =  React.createContext()
+
 const InputBox = () => {
-  
- const [unblurring, setUnblurring] = useState({})
- const [isShowing, setIsShowing] =  useState(false)
 
-  const filterblur = {
-    opacity: 1   
-   
-  }
+  const [isShowing, setIsShowing] = React.useState(false)
+
+  const displayform = isShowing ? {display : "block"} : {display : "none"}
+  isShowing ? document.body.classList.add("stopscrolling") : document.body.classList.remove("stopscrolling")
+  // isShowing ? document.getElementById("popupbox").classList.add("popupbox") : document.getElementById("popupbox").classList.remove("popupbox")
+
+ 
 
 
+  const handleClick  = () => {
+    setIsShowing(prev => !prev)
+    
+ }
 
-const handleClick = () => {      
-   
-    document.body.classList.add("stopscrolling") 
-    document.getElementById("myform").style.display = "block"     
-    document.getElementById("myform").classList.add("unblur")     
-  
-  } 
 
-  // const formStyle = isShowing ? {display: "block"} :  {display: "none"}
 
   return (    
     <div className='m-3 p-4 bg-white rounded-xl' > 
-     <div className='flex justify-center h-screen w-screen' id='myform' style={{display: "none"}} >  <Postform  />      </div>  
+    <formContext.Provider value={ [isShowing, setIsShowing] }>
+    <div style={displayform}> <Postform />  </div>
+
+    </formContext.Provider>
+  
+
+     
      <div  >  <div className='flex' >
         <Avatar />        
         <input className='rounded-xl p-3 w-full' id='post' type= "text" name='post' placeholder="What's on your mind today?" onClick={handleClick}  />

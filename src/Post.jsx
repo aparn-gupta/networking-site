@@ -6,7 +6,7 @@ import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 
 const Post = (props) => {
   return (
-    <div className='w-full  mx-3 p-4  rounded-2xl my-6  border-slate-600 border bg-pink-100'>
+    <div className='w-full  mx-3 p-4  rounded-2xl my-6  border-slate-600 border bg-blue-100'>
         <div className='flex'> <Avatar src={props.src} className='m-1' /> <div className='px-3 flex flex-col'> {props.name}   <div className='text-slate-500 text-xs' > {props.time} </div>   </div> </div>
         <div className='py-3'> {props.text} </div>
        

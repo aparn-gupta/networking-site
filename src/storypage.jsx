@@ -3,14 +3,20 @@ import Storydata from './StoryData'
 import ReactPlayer from "react-player";
 import { Avatar } from '@mui/material';
 import Indistory from './IndiStory';
+// import { IdContext } from "./IndiStory";
 
 
 const Storypage = () => {
 
+  
 
 
+  // const [idd, setMyidd] = React.useContext(IdContext)
 
-  let myId = 103
+
+ 
+
+  let myId = JSON.parse(localStorage.getItem("myId"))
   let reqdStory = {}
 
 
@@ -33,7 +39,7 @@ const Storypage = () => {
       
        <div  className=' flex justify-between relative  w-1/3 h-176  '>
        <div className='absolute top-5 left-5 flex'> <Avatar className=' ring-4 ring-pink-600 ' src= {reqdStory.src} />     <p className='  text-white font-bold mx-4  text-lg' > {reqdStory.name}  </p> </div>  
-         {reqdStory.imagesrc &&  <img  className='w-1/3 h-176 ' src= {reqdStory.imagesrc} /> }   {reqdStory.url &&  <ReactPlayer  width="400px" height="590px" url= {reqdStory.url}/>}
+         {reqdStory.imagesrc &&  <img  className='w-full h-168 ' src= {reqdStory.imagesrc} /> }   {reqdStory.url &&  <ReactPlayer  width="400px" height="590px" url= {reqdStory.url}/>}
         
          </div> 
         

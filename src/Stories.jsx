@@ -13,7 +13,7 @@ const Stories = () => {
   
   return (
     
-   <div className='w-2/5 bg-slate-200'  > 
+   <div className='w-2/5'  > 
 
    <div  className=' flex justify-between'> 
     {Storydata.map(item => 
