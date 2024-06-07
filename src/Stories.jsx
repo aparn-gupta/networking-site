@@ -4,26 +4,66 @@ import Post from './Post'
 import postdata from './postdata'
 import Indistory from './IndiStory'
 import Storydata from './StoryData';
+import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+import { IconButton } from '@mui/material'
+
 
 
 
 
 const Stories = () => {
 
+  const [i, setmyIndex] =  React.useState(0)
+
+  let x = i + 4
+
+  let renderedStorydata = Storydata.slice(i, x)  
+
+  const handleForwardbutton = () => {
+   if (x < Storydata.length ) {
+    setmyIndex(prev => prev + 1)
+   }
+
+  }
+
+  const handleBackbutton = () => {
+    if (i) {
+      setmyIndex(prev => prev - 1)
+    }
+
+  }
+
+  
+  
   
   return (
     
    <div className='w-2/5'  > 
 
-   <div  className=' flex justify-between'> 
-    {Storydata.map(item => 
-    <Indistory  key = {item.id} 
-      id = {item.id}  
-      src = {item.src} 
-      imagesrc = {item.imagesrc} 
-      url = {item.url}
-      name = {item.name}/>)}     
-   </div>   
+
+
+<div  className='flex justify-between '>    
+   {renderedStorydata.map(item => 
+   <Indistory  key = {item.id} 
+     id = {item.id}  
+     src = {item.src} 
+     imagesrc = {item.imagesrc} 
+     url = {item.url}
+     name = {item.name}/>)}     
+  </div> 
+
+
+  <div className='flex justify-between'> 
+
+    
+   <IconButton>   <ArrowBackIosNewOutlinedIcon  className='text-pink-400 ring-1' onClick={handleBackbutton} /> </IconButton>
+    <IconButton>  <ArrowForwardIosOutlinedIcon className='text-pink-400 ring-1' onClick={handleForwardbutton} />   </IconButton>
+  
+
+ </div>
+
+   
 
     
     <InputBox />
@@ -39,20 +79,6 @@ const Stories = () => {
       />)}
 
     
-
-
-{/* <Post 
-      src = {postdata[1].src}
-    
-      name = {postdata[1].name}
-      time = {postdata[1].time}
-      text = {postdata[1].text}
-      imagesrc = {postdata[1].imagesrc}
-      likes = {postdata[1].likes}
-      /> 
-       */}
-
-
 
 
    </div>

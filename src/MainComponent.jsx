@@ -8,6 +8,7 @@ import Market from "./Market";
 import Gaming from "./Gaming";
 import Videos from "./Videos";
 import Storypage from "./storypage";
+import User from "./user";
 
 
 function MainComponent() {
@@ -33,6 +34,7 @@ function MainComponent() {
           <Route path="/videos" element={<Videos />} />
           <Route path="/gaming" element={<Gaming />} />
           <Route path="/stories/:id" element={<Storypage />} />
+          <Route path="/users/:userid" element={<User />} />
 
         </Routes>
       </BrowserRouter>

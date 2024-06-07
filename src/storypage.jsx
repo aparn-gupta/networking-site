@@ -3,34 +3,25 @@ import Storydata from './StoryData'
 import ReactPlayer from "react-player";
 import { Avatar } from '@mui/material';
 import Indistory from './IndiStory';
+import { useParams } from 'react-router-dom';
 // import { IdContext } from "./IndiStory";
 
 
 const Storypage = () => {
 
-  
 
-
-  // const [idd, setMyidd] = React.useContext(IdContext)
-
-
+  let myId = useParams()
  
-
-  let myId = JSON.parse(localStorage.getItem("myId"))
+  // let myId = JSON.parse(localStorage.getItem("myId"))
   let reqdStory = {}
 
 
  for (let each of Storydata) {
-  if (each.id === myId) {
+  if (each.id === myId.id) {
     reqdStory = each
   }
 
- }
-
-  
-
-
-  
+ }  
 
 
   return (

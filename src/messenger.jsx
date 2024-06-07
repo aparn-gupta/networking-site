@@ -2,11 +2,16 @@ import React from 'react'
 
 const Messenger = () => {
   return (
-    <div>
-        <div className='w-28 h-144 mt-20   bg-pink-200'>
-            <div className='text-black font-xl'> CHATS </div>
+    <div className='notifications'>
+       <div className='p-5'> 
+       <h1 className='font-bold text-xl my-2'> Messages  </h1>
 
-        </div>
+       <p> Message 1 </p>
+       <p> Message 2 </p>
+       <p> Message 3 </p>
+
+
+       </div>
       
     </div>
   )

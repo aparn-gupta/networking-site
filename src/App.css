@@ -19,14 +19,36 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(125, 156, 186);   
+    background-color: rgb(156, 163, 171);   
     width: 26rem;
     height: 28rem;   
     position: fixed;
     z-index: 1000; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
     padding: 1.5rem;
    
 
 
+}
+
+
+.notifications {
+    width: 20rem;
+    height: 32rem;
+    right: 0;
+    top: 5.5rem;
+    position: fixed;    
+    background-color: rgb(216, 226, 226);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+.screenbox  {
+    width: 1500px;
+    height: 750px;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.704);
 }

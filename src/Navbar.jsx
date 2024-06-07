@@ -14,7 +14,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
+
 import Messenger from './messenger';
+import Notificationbox from './notificationbox';
+import Menu from './Menu';
 
 
 
@@ -23,15 +26,34 @@ const Navbar = () => {
   
 
   const [showMessenger, setShowMessenger] = React.useState(false)
+  const [showNotification, setShowNotification] = React.useState(false)
+  const [showMenu, setShowMenu] = React.useState(false)
 
-  const MessengerBox = showMessenger ?  <div> <Messenger />  </div>  : <div></div> 
+  const notificationbox = showNotification ?  <Notificationbox/>  : null
+  const messengerbox = showMessenger ?  <Messenger/>  : null
+  const MenuBox = showMenu ?  <Menu/>  : null
 
 
-  const handleClick = () =>  {
-    setShowMessenger(prev => !prev)
+  const handleClickforNotification = () =>  {
+    
+    setShowNotification(prev => !prev)
+    setShowMessenger(false)
+    setShowMenu(false)
   }
 
+  const handleClickforMessenger = () =>  {
+    setShowMessenger(prev => !prev)
+    setShowNotification(false)
+    setShowMenu(false)
+    
+  }
 
+  const handleClickforMenu = () =>  {
+    setShowMenu(prev => !prev)
+    setShowNotification(false)
+    setShowMessenger(false)
+    
+  }
 
 
 
@@ -53,21 +75,25 @@ const Navbar = () => {
 
 
       
-     
+    
     
      
      
       
       </div>
+     
 
 
       <div className='flex justify-between'>
        
-        <IconButton className='h-14 w-14'  onClick={handleClick}  >  <MessageIcon    sx = {{fontSize: 30}}  className='text-black'/>  </IconButton>
-        <div className=''> {MessengerBox}  </div>
-        <IconButton className='h-14 w-14'> <NotificationsIcon sx = {{fontSize: 30}} className='text-black'  />  </IconButton>
-        <IconButton className='h-14 w-14'>  <MenuIcon sx = {{fontSize: 30}} className='text-black' />  </IconButton>
-        <IconButton className='h-14 w-14'>  <Avatar src='https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg'  />  </IconButton>
+        <IconButton className='h-14 w-14'  onClick={handleClickforMessenger}  >  <MessageIcon    sx = {{fontSize: 30}}  className='text-black'/>  </IconButton>
+        
+        <IconButton className='h-14 w-14' onClick={handleClickforNotification}>  <NotificationsIcon sx = {{fontSize: 30}} className='text-black'  />  </IconButton>
+        <IconButton className='h-14 w-14' onClick={handleClickforMenu} >  <MenuIcon sx = {{fontSize: 30}} className='text-black' />  </IconButton>
+       <Link to = "/users/:userid">  <IconButton className='h-14 w-14'>  <Avatar src='https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg'  />  </IconButton>  </Link>
+        <div className=''> {notificationbox}  </div>
+        <div className=''> {messengerbox}  </div>
+        <div className=''> {MenuBox}  </div>
       </div>
          
 

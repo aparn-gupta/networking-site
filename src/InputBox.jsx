@@ -30,7 +30,7 @@ const InputBox = () => {
   return (    
     <div className='m-3 p-4 bg-white rounded-xl' > 
     <formContext.Provider value={ [isShowing, setIsShowing] }>
-    <div style={displayform}> <Postform />  </div>
+    <div style={displayform}> <div className='screenbox'> <Postform />  </div>  </div>
 
     </formContext.Provider>
   

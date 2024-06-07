@@ -9,6 +9,8 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import FeedIcon from '@mui/icons-material/Feed';
 import FlagIcon from '@mui/icons-material/Flag';
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -16,7 +18,7 @@ const Sidebar = () => {
   return (
     <div className='w-1/3 '>
 
-       <SidebarRow  photo =  {<Avatar src="https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg" />} title = "Ben"/>
+       <Link to = "/users/:userid" >  <SidebarRow  photo =  {<Avatar src="https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg" />} title = "Ben"/> </Link>
         <SidebarRow  icon =  {<Diversity3Icon  className='text-pink-600'/>}  title = "Friends"/>
         <SidebarRow  icon =  {<WatchLaterIcon  className='text-pink-600'/>}  title = "Memories"  />
         <SidebarRow  icon = {<BookmarksIcon  className='text-pink-600'  /> } title = "Saved" />
