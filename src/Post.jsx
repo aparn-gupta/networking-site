@@ -5,6 +5,7 @@ import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutline
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import SendIcon from '@mui/icons-material/Send';
+import RecommendIcon from '@mui/icons-material/Recommend';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -20,6 +21,20 @@ const Post = (props) => {
 
   const [liked, setLiked]  = useState(false)
 const icon = liked ? <ThumbUpIcon/> : <ThumbUpAltOutlinedIcon/>
+// const [numberOfLikes, setNumberofLikes] = useState(props.likes)
+// const [numberOfLikes, setLiked] = useState(false)\
+
+
+
+const numberOfLikes = liked ? parseInt(props.likes) + 1 : props.likes
+
+
+
+const handleClick = () => {
+  setLiked(prev => !prev)  
+ 
+
+}  
 
 
 
@@ -29,10 +44,10 @@ const icon = liked ? <ThumbUpIcon/> : <ThumbUpAltOutlinedIcon/>
         <div className='py-3'> {props.text} </div>
        
        { props.imagesrc && <div className='py-2'> <img className='w-full h-112' src= {props.imagesrc}/> </div>}
-        <div className='h-6 px-3 py-1 ' > <ThumbUpAltOutlinedIcon className='text-slate-500'  /> {props.likes}  </div>
+        <div className='h-6 px-3 py-1 ' > <RecommendIcon className='text-blue-800'  /> {numberOfLikes}  </div>
         <div className='flex justify-between w-full h-10 px-2 py-2  '>
             {/* <div className='text-blue-800' onClick={() => {setLiked(prev => !prev)}} > {icon}    Like  </div> */}
-            <div onClick={() => {setLiked(prev => !prev)}}>   <Button variant='contained' sx={{ color: 'grey', backgroundColor: 'white', textTransform: 'capitalize', font: 'bold', width: '9rem',  }}> <div className='flex text-blue-600'>  {icon} <p className='mx-1'> Like </p> </div>  </Button> </div>
+            <div onClick={handleClick}>   <Button variant='contained' sx={{ color: 'grey', backgroundColor: 'white', textTransform: 'capitalize', font: 'bold', width: '9rem',  }}> <div className='flex text-blue-600'>  {icon} <p className='mx-1'> Like </p> </div>  </Button> </div>
             <div>  <Button variant='contained' sx={{ color: 'grey', backgroundColor: 'white', textTransform: 'capitalize', font: 'bold', width: '9rem',}}> <ChatBubbleOutlineOutlinedIcon  className='text-slate-500 mx-1 font-bold' /> Comment   </Button> </div>
             <div>  <Button variant='contained' sx={{ color: 'grey', backgroundColor: 'white', textTransform: 'capitalize', font: 'bold', width: '9rem' }}> <ShareOutlinedIcon  className='text-slate-500 mx-1 font-bold' /> Share   </Button> </div>
 

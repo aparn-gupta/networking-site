@@ -38,7 +38,7 @@
     right: 0;
     top: 5.5rem;
     position: fixed;    
-    background-color: rgb(216, 226, 226);
+    background-color: rgb(225, 234, 234);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -57,9 +57,9 @@
 
 
 
-/* .hehe {
+.hehe {
     background-color: slategrey;
-    background-color: grey;
-    background-color: gainsboro;
+    background-color: rgb(162, 161, 161);
+    background-color: rgb(69, 40, 40);
 
-} */
+}

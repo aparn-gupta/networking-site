@@ -60,7 +60,7 @@ const postdata = [
     {
         id: 7,
         src: "https://th.bing.com/th/id/OIP.BXj1H11MluGOcdQbPfU1jgHaHa?rs=1&pid=ImgDetMain",
-        name: "Kim Wexler",
+        name: "Kimberly Wexler",
         time: "17:21",
         text: "We won Mesa Verde!!",
       

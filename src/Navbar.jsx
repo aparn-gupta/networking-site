@@ -12,12 +12,12 @@ import OndemandVideoOutlinedIcon from '@mui/icons-material/OndemandVideoOutlined
 import MessageIcon from '@mui/icons-material/Message';
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
 
 import Messenger from './messenger';
 import Notificationbox from './notificationbox';
 import Menu from './Menu';
+// import Button from '@mui/material';
 
 
 
@@ -60,7 +60,7 @@ const Navbar = () => {
 
   return (
     <div className='p-4 flex justify-between shadow-lg bg-white '>
-      <div className='flex justify-between'> 
+      <div className='flex justify-between '> 
          <Link to="/" > <img className='h-12 w-12 rounded-full' src='https://blog.spoongraphics.co.uk/wp-content/uploads/2011/02/Untitled-1.jpg' />  </Link>
          <input className='bg-slate-100 rounded-3xl h-10 p-3 mx-3' type='text' placeholder='Search InterAct'/> 
       </div>        
@@ -84,7 +84,7 @@ const Navbar = () => {
      
 
 
-      <div className='flex justify-between'>
+      <div className='flex justify-between '>
        
         <IconButton className='h-14 w-14'  sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}}  onClick={handleClickforMessenger}  >  <MessageIcon    sx = {{fontSize: 25}}  className='text-black'/>  </IconButton>
         
