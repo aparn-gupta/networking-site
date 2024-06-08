@@ -15,9 +15,6 @@ const InputBox = () => {
 
   const displayform = isShowing ? {display : "block"} : {display : "none"}
   isShowing ? document.body.classList.add("stopscrolling") : document.body.classList.remove("stopscrolling")
-  // isShowing ? document.getElementById("popupbox").classList.add("popupbox") : document.getElementById("popupbox").classList.remove("popupbox")
-
- 
 
 
   const handleClick  = () => {
@@ -28,7 +25,7 @@ const InputBox = () => {
 
 
   return (    
-    <div className='m-3 p-4 bg-white rounded-xl' > 
+    <div className='m-3 p-4 bg-white rounded-xl shadow-lg border-2 border-slate-200' > 
     <formContext.Provider value={ [isShowing, setIsShowing] }>
     <div style={displayform}> <div className='screenbox'> <Postform />  </div>  </div>
 

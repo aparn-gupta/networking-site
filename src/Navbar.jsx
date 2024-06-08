@@ -59,7 +59,7 @@ const Navbar = () => {
 
 
   return (
-    <div className='p-4 flex justify-between shadow-md bg-white'>
+    <div className='p-4 flex justify-between shadow-lg bg-white '>
       <div className='flex justify-between'> 
          <Link to="/" > <img className='h-12 w-12 rounded-full' src='https://blog.spoongraphics.co.uk/wp-content/uploads/2011/02/Untitled-1.jpg' />  </Link>
          <input className='bg-slate-100 rounded-3xl h-10 p-3 mx-3' type='text' placeholder='Search InterAct'/> 
@@ -86,11 +86,11 @@ const Navbar = () => {
 
       <div className='flex justify-between'>
        
-        <IconButton className='h-14 w-14'  onClick={handleClickforMessenger}  >  <MessageIcon    sx = {{fontSize: 30}}  className='text-black'/>  </IconButton>
+        <IconButton className='h-14 w-14'  sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}}  onClick={handleClickforMessenger}  >  <MessageIcon    sx = {{fontSize: 25}}  className='text-black'/>  </IconButton>
         
-        <IconButton className='h-14 w-14' onClick={handleClickforNotification}>  <NotificationsIcon sx = {{fontSize: 30}} className='text-black'  />  </IconButton>
-        <IconButton className='h-14 w-14' onClick={handleClickforMenu} >  <MenuIcon sx = {{fontSize: 30}} className='text-black' />  </IconButton>
-       <Link to = "/users/:userid">  <IconButton className='h-14 w-14'>  <Avatar src='https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg'  />  </IconButton>  </Link>
+        <IconButton className='h-14 w-14' sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}} onClick={handleClickforNotification}>  <NotificationsIcon sx = {{fontSize: 25}} className='text-black'  />  </IconButton>
+        <IconButton className='h-14 w-14' onClick={handleClickforMenu} sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}} >  <MenuIcon sx = {{fontSize: 25}} className='text-black' />  </IconButton>
+       <Link to = "/users/:userid">  <IconButton className='h-14 w-14'sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}} >  <Avatar src='https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg'  />  </IconButton>  </Link>
         <div className=''> {notificationbox}  </div>
         <div className=''> {messengerbox}  </div>
         <div className=''> {MenuBox}  </div>

@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div>
 
-      <div className="flex"  id="popupbox"  >
+      <div className="flex "  id="popupbox "   >
 
       <Sidebar />
       <Stories />

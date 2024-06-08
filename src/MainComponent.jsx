@@ -23,7 +23,7 @@ function MainComponent() {
     
         
       <BrowserRouter>
-        <div >
+        <div className=" w-full">
           <Navbar />
    </div>
 

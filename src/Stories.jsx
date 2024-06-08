@@ -57,8 +57,8 @@ const Stories = () => {
   <div className='flex justify-between'> 
 
     
-   <IconButton>   <ArrowBackIosNewOutlinedIcon  className='text-pink-400 ring-1' onClick={handleBackbutton} /> </IconButton>
-    <IconButton>  <ArrowForwardIosOutlinedIcon className='text-pink-400 ring-1' onClick={handleForwardbutton} />   </IconButton>
+   <IconButton>   <ArrowBackIosNewOutlinedIcon  className='text-pink-400 ' onClick={handleBackbutton} /> </IconButton>
+    <IconButton>  <ArrowForwardIosOutlinedIcon className='text-pink-400 ' onClick={handleForwardbutton} />   </IconButton>
   
 
  </div>
