@@ -14,9 +14,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
 
+
 import Messenger from './messenger';
 import Notificationbox from './notificationbox';
 import Menu from './Menu';
+
 // import Button from '@mui/material';
 
 
@@ -59,10 +61,10 @@ const Navbar = () => {
 
 
   return (
-    <div className='p-4 flex justify-between shadow-lg bg-white '>
+    <div className='p-1 flex justify-between shadow-lg bg-white '>
       <div className='flex justify-between '> 
          <Link to="/" > <img className='h-12 w-12 rounded-full' src='https://blog.spoongraphics.co.uk/wp-content/uploads/2011/02/Untitled-1.jpg' />  </Link>
-         <input className='bg-slate-100 rounded-3xl h-10 p-3 mx-3' type='text' placeholder='Search InterAct'/> 
+         <input className='bg-slate-100 rounded-3xl h-10 p-3 mx-3 my-1.5' type='text' placeholder='Search InterAct'/> 
       </div>        
          
       <div className='text-slate-500 flex justify-between pt-4 w-1/3'> 

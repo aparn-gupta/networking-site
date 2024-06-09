@@ -34,7 +34,7 @@ const InputBox = () => {
 
      
      <div  >  <div className='flex' >
-        <Avatar />        
+        <Avatar src = 'https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg' />        
         <input className='rounded-xl p-3 w-full' id='post' type= "text" name='post' placeholder="What's on your mind today?" onClick={handleClick}  />
         </div>
         

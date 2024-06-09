@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className='w-1/3 '>
+    <div className='w-1/3 mt-14'>
 
        <Link to = "/users/:userid" >  <SidebarRow  photo =  {<Avatar src="https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg" />} title = "Ben"/> </Link>
         <SidebarRow  icon =  {<Diversity3Icon  className='text-pink-600'/>}  title = "Friends"/>

@@ -26,7 +26,7 @@ const Storypage = () => {
 
 
   return (
-    <div className='bg-green-900 '>
+    <div className='bg-green-900 pt-16 '>
         <div className='h-screen flex justify-center '> 
       
        <div  className=' flex justify-between relative  w-1/3 h-176  '>

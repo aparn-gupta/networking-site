@@ -8,33 +8,43 @@ import SendIcon from '@mui/icons-material/Send';
 import RecommendIcon from '@mui/icons-material/Recommend';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { Button } from '@mui/material'
-
-
-
-
 
 
 
 const Post = (props) => {
 
   const [liked, setLiked]  = useState(false)
+
 const icon = liked ? <ThumbUpIcon/> : <ThumbUpAltOutlinedIcon/>
-// const [numberOfLikes, setNumberofLikes] = useState(props.likes)
-// const [numberOfLikes, setLiked] = useState(false)\
-
-
 
 const numberOfLikes = liked ? parseInt(props.likes) + 1 : props.likes
 
 
-
 const handleClick = () => {
-  setLiked(prev => !prev)  
- 
+  setLiked(prev => !prev)   
 
 }  
+
+
+const [userCommentData, setUserCommentData] = useState([])
+const [userComment, setUserComment] = useState("")
+const [showUserComment, setShowUserComment] = useState({display: "none"})
+
+const handleSubmit = (e) => {
+    e.preventDefault()
+    setShowUserComment({display : "block"})
+    setUserComment(userCommentData)
+    setUserCommentData([])
+   
+
+}
+
+const handleChange = (e) => {
+  setUserCommentData(e.target.value)
+
+}
+
 
 
 
@@ -53,8 +63,20 @@ const handleClick = () => {
 
         </div>
 
-        <div className='flex my-4'>  <Avatar className='ml-8 mr-3' src='https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg' /> 
-         <div className='flex justify-between'> <input className='rounded-xl w-96 bg-slate-200 px-3' type='text' placeholder='Write a public comment'  /> <SendIcon sx = {{color: 'gainsboro', marginLeft: '0.3rem', marginTop: '0.5rem' }} />  </div>
+        <div style = {showUserComment} > 
+       <div className='flex'>
+       <Avatar className='mr-3 mt-5' src='https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg' /> 
+       <p  className='mt-5 bg-slate-300 rounded-3xl py-3 px-4 leading-tight text-sm w-full'> {userComment}   </p> 
+       </div>
+           </div>  
+
+        <div className='flex my-4'>  <Avatar className='ml-8 mr-3 mt-2' src='https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg' /> 
+         <div className='flex justify-between'>
+          <form onSubmit={handleSubmit}> 
+          <input   value={userCommentData} onChange={handleChange} className='rounded-xl w-96 bg-slate-200 p-4' type='text' placeholder='Write a public comment' /> 
+         <button type='submit'>  <SendIcon sx = {{color: 'gainsboro', marginLeft: '0.3rem', marginTop: '0.5rem' }} />  </button>
+          </form>
+            </div>
          
          </div>
 

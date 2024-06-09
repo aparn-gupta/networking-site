@@ -11,7 +11,7 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div className=''>
 
       <div className="flex "  id="popupbox "   >
 

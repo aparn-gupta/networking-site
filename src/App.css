@@ -13,6 +13,14 @@
 }
 
 
+.navbar {
+    z-index: 1001;
+    position: fixed;
+    width: 1340px;
+    
+}
+
+
 
 .popup {
    
@@ -36,7 +44,7 @@
     width: 20rem;
     height: 32rem;
     right: 0;
-    top: 5.5rem;
+    top: 4rem;
     position: fixed;    
     background-color: rgb(225, 234, 234);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
@@ -61,5 +69,24 @@
     background-color: slategrey;
     background-color: rgb(162, 161, 161);
     background-color: rgb(69, 40, 40);
+
+}
+
+
+.openmessenger {
+   
+    top: 50%;
+    left: 60%;    
+    background-color: rgb(212, 214, 217);   
+    width: 18rem;
+    height: 22rem;  
+    position: fixed; 
+    
+    z-index: 1000; 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+    padding: 2.5rem;
+    transform: translate(-30%, -0%);
+   
+
 
 }

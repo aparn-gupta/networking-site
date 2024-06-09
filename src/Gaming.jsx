@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gaming = () => {
   return (
-    <div>
+    <div className='p-20 text-2xl font-bold'>
       My gaming
     </div>
   )
