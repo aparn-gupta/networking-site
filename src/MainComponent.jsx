@@ -11,6 +11,8 @@ import Storypage from "./storypage";
 import User from "./user";
 
 
+
+
 function MainComponent() {
 
   
@@ -18,14 +20,14 @@ function MainComponent() {
     
 
   return (
-    <div >
-
-    
+    <div >   
         
       <BrowserRouter>
         <div className="navbar">
           <Navbar />
    </div>
+
+        
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -35,6 +37,7 @@ function MainComponent() {
           <Route path="/gaming" element={<Gaming />} />
           <Route path="/stories/:id" element={<Storypage />} />
           <Route path="/users/:userid" element={<User />} />
+          
 
         </Routes>
       </BrowserRouter>

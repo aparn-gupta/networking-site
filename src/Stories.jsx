@@ -46,6 +46,7 @@ const Stories = () => {
 <div  className='flex justify-between '>    
    {renderedStorydata.map(item => 
    <Indistory  key = {item.id} 
+     userId = {item.userId}
      id = {item.id}  
      src = {item.src} 
      imagesrc = {item.imagesrc} 
@@ -70,6 +71,7 @@ const Stories = () => {
 
    { postdata.map(item => 
       <Post key = {item.id}
+      userId = {item.userId}
       src = {item.src}    
       name = {item.name}
       time = {item.time}

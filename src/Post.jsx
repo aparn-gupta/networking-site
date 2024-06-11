@@ -27,15 +27,18 @@ const handleClick = () => {
 }  
 
 
-const [userCommentData, setUserCommentData] = useState([])
+const [userCommentData, setUserCommentData] = useState(null)
 const [userComment, setUserComment] = useState("")
 const [showUserComment, setShowUserComment] = useState({display: "none"})
 
 const handleSubmit = (e) => {
-    e.preventDefault()
-    setShowUserComment({display : "block"})
-    setUserComment(userCommentData)
-    setUserCommentData([])
+    e.preventDefault()   
+    
+    setUserCommentData(null)
+    if (userCommentData) {
+      setShowUserComment({display : "block"})
+      setUserComment(userCommentData)
+    }
    
 
 }
@@ -50,13 +53,13 @@ const handleChange = (e) => {
 
   return (
     <div className='w-full  mx-3 p-4  rounded-2xl my-6  bg-white shadow-lg border-2 border-slate-200'>
-        <Link to = "/users/:userid"> <div className='flex'> <Avatar src={props.src} className='m-1' /> <div className='px-3 flex flex-col'> {props.name}   <div className='text-slate-500 text-xs' > {props.time} </div>   </div> </div>   </Link>
+        <Link to = {`/users/${props.userId}`} > <div className='flex'> <Avatar src={props.src} className='m-1' /> <div className='px-3 flex flex-col'> {props.name}   <div className='text-slate-500 text-xs' > {props.time} </div>   </div> </div>   </Link>
         <div className='py-3'> {props.text} </div>
        
        { props.imagesrc && <div className='py-2'> <img className='w-full h-112' src= {props.imagesrc}/> </div>}
         <div className='h-6 px-3 py-1 ' > <RecommendIcon className='text-blue-800'  /> {numberOfLikes}  </div>
         <div className='flex justify-between w-full h-10 px-2 py-2  '>
-            {/* <div className='text-blue-800' onClick={() => {setLiked(prev => !prev)}} > {icon}    Like  </div> */}
+           
             <div onClick={handleClick}>   <Button variant='contained' sx={{ color: 'grey', backgroundColor: 'white', textTransform: 'capitalize', font: 'bold', width: '9rem',  }}> <div className='flex text-blue-600'>  {icon} <p className='mx-1'> Like </p> </div>  </Button> </div>
             <div>  <Button variant='contained' sx={{ color: 'grey', backgroundColor: 'white', textTransform: 'capitalize', font: 'bold', width: '9rem',}}> <ChatBubbleOutlineOutlinedIcon  className='text-slate-500 mx-1 font-bold' /> Comment   </Button> </div>
             <div>  <Button variant='contained' sx={{ color: 'grey', backgroundColor: 'white', textTransform: 'capitalize', font: 'bold', width: '9rem' }}> <ShareOutlinedIcon  className='text-slate-500 mx-1 font-bold' /> Share   </Button> </div>

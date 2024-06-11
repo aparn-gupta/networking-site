@@ -1,6 +1,7 @@
 const postdata = [
     {
         id: 1,
+        userId: 505,
         src: "https://th.bing.com/th/id/R.f11b69019e08a90eee8a18b9b03c866e?rik=EWFh1CAcRStkaQ&riu=http%3a%2f%2fwww.cartoonbucket.com%2fwp-content%2fuploads%2f2015%2f05%2fPikachu-Running-Picture.png&ehk=LRh%2ftfeNy6AJxn4X6ak6X9TMz3tkSsW0LQOjGwo5A%2bI%3d&risl=&pid=ImgRaw&r=0",
         name: "Pikachu",
         time: "12:50",
@@ -10,6 +11,7 @@ const postdata = [
     },
     {
         id: 2,
+        userId: 502,
         src: "https://www.theghanareport.com/wp-content/uploads/2022/08/126349481_saul2t.jpg",
         name: "James McGill",
         time: "22:02",
@@ -19,8 +21,9 @@ const postdata = [
     },
     {
         id: 3,
+        userId: 509,
         src: "",
-        name: "Charlie",
+        name: "Thomas",
         time: "17:00",
         text: "Good vibes only.",
         imagesrc: "https://th.bing.com/th/id/OIP.TwPCILvWrxZsJ0MttaHR3AHaF9?rs=1&pid=ImgDetMain",
@@ -31,8 +34,9 @@ const postdata = [
    
     {
         id: 4,
+        userId: 503,
         src: "https://th.bing.com/th/id/R.6f44c3a17277ddb557e9c7e08a73025f?rik=UyUTKgA3NGLeWA&riu=http%3a%2f%2fimages.amcnetworks.com%2famc.com%2fwp-content%2fuploads%2f2015%2f01%2fCBS-S2-Portraits-800x600_Mike_0061_V4.jpg&ehk=QfJL%2b3bSgJVSS%2bfRNalUQ9DaJ%2fwRkIN0FKdC2jPcyRs%3d&risl=&pid=ImgRaw&r=0",
-        name: "Mike",
+        name: "Michael Ehrmantraut",
         time: "16:55",
         text: "I've got a new work for y'all",
        
@@ -41,6 +45,7 @@ const postdata = [
    
     {  
         id: 5,
+        userId: 501,
         src: "https://i.pinimg.com/736x/1c/ca/2c/1cca2ccdab4b424fd31f793ef0924af8.jpg",
         name: "Oswald",
         time: "07:07",
@@ -50,6 +55,7 @@ const postdata = [
     },
     {  
         id: 6,
+        userId: 504,
         src: "https://img.ecartelera.com/noticias/58800/58846-m.jpg?v=2.0",
         name: "Doctor Strange",
         time: "15:16",
@@ -59,6 +65,7 @@ const postdata = [
     },
     {
         id: 7,
+        userId: 508,
         src: "https://th.bing.com/th/id/OIP.BXj1H11MluGOcdQbPfU1jgHaHa?rs=1&pid=ImgDetMain",
         name: "Kimberly Wexler",
         time: "17:21",
@@ -69,8 +76,9 @@ const postdata = [
   
     {
         id: 8,
+        userId: 507,
         src: "https://www.rollingstone.com/wp-content/uploads/2020/03/better-call-saul-namaste-howard.jpg?w=1024",
-        name: "Howard",
+        name: "Howard Hamllin",
         time: "22:19",
         text: "Seize the day!",
       
