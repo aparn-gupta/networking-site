@@ -8,6 +8,7 @@ import InputBox from './InputBox'
 import Post from './Post'
 import { userData } from './userComponents/userData'
 import { useParams } from 'react-router-dom'
+import { useridContext } from './MainComponent'
 
 const User = () => {
 
@@ -25,7 +26,17 @@ const User = () => {
 
   }
 
-  let userself = true
+  let ownAcc = false
+
+
+  const [selfId, setSelfId] = React.useContext(useridContext)
+
+  if (selfId === userId.userid) {
+    ownAcc = true
+
+  }
+
+   
 
   
 
@@ -52,7 +63,7 @@ const User = () => {
             <p className='text-lg text-slate-400 font-bold'> {indiUser.friendsCount} friends </p>
         </div>
 
-        { !userself &&  
+        { ownAcc &&  
         <div className='flex py-20 '>
           <div className='mx-1'><Button variant='contained' sx={{ color: 'white', backgroundColor: 'blue', width: '9rem' }}> Add to story </Button> </div>
           <div className='mx-1'><Button variant='contained' sx={{ color: 'white', backgroundColor: 'rgb(162, 161, 161)', width: '9rem' }}> Edit Profile </Button> </div>
@@ -60,7 +71,7 @@ const User = () => {
         </div>
         }
 
-        {userself && 
+        {!ownAcc && 
       <div className='flex py-20 '>
         <div className='mx-1'><Button variant='contained' sx={{ color: 'white', backgroundColor: 'blue', width: '9rem' }}> Message </Button> </div>
         <div className='mx-1'><Button variant='contained' sx={{ color: 'white', backgroundColor: 'rgb(162, 161, 161)', width: '9rem' }}> Friends </Button> </div>

@@ -10,6 +10,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@mui/material'
 
+import { userData } from './userComponents/userData';
+import { useridContext } from './MainComponent';
+
 
 
 const Post = (props) => {
@@ -48,6 +51,17 @@ const handleChange = (e) => {
 
 }
 
+let currentUser = {}
+const [selfId, setSelfId] = React.useContext(useridContext)
+
+  for (let each of userData) {
+    if (each.userId === parseInt(selfId)) {
+      currentUser = each
+
+
+    }
+  }
+
 
 
 
@@ -73,7 +87,7 @@ const handleChange = (e) => {
        </div>
            </div>  
 
-        <div className='flex my-4'>  <Avatar className='ml-8 mr-3 mt-2' src='https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg' /> 
+        <div className='flex my-4'>  <Avatar className='ml-8 mr-3 mt-2' src= {currentUser.pfpSrc} /> 
          <div className='flex justify-between'>
           <form onSubmit={handleSubmit}> 
           <input   value={userCommentData} onChange={handleChange} className='rounded-xl w-96 bg-slate-200 p-4' type='text' placeholder='Write a public comment' /> 

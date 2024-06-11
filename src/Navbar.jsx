@@ -18,13 +18,17 @@ import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
 import Messenger from './messenger';
 import Notificationbox from './notificationbox';
 import Menu from './Menu';
+import { useridContext } from './MainComponent';
 
-// import Button from '@mui/material';
+import { userData } from './userComponents/userData';
+
 
 
 
 const Navbar = () => {
 
+
+  const [selfId, setSelfId] = React.useContext(useridContext)
   
 
   const [showMessenger, setShowMessenger] = React.useState(false)
@@ -56,6 +60,18 @@ const Navbar = () => {
     setShowMessenger(false)
     
   }
+
+
+  let currentUser = {}
+ 
+  
+    for (let each of userData) {
+      if (each.userId === parseInt(selfId)) {
+        currentUser = each
+  
+  
+      }
+    }
 
 
 
@@ -92,7 +108,7 @@ const Navbar = () => {
         
         <IconButton className='h-14 w-14' sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}} onClick={handleClickforNotification}>  <NotificationsIcon sx = {{fontSize: 25}} className='text-black'  />  </IconButton>
         <IconButton className='h-14 w-14' onClick={handleClickforMenu} sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}} >  <MenuIcon sx = {{fontSize: 25}} className='text-black' />  </IconButton>
-       <Link to = "/users/:userid">  <IconButton className='h-14 w-14'sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}} >  <Avatar src='https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg'  />  </IconButton>  </Link>
+       <Link to = {`/users/${selfId}`}>  <IconButton className='h-14 w-14'sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}} >  <Avatar src= {currentUser.pfpSrc}  />  </IconButton>  </Link>
         <div className=''> {notificationbox}  </div>
         <div className=''> {messengerbox}  </div>
         <div className=''> {MenuBox}  </div>

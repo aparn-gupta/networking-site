@@ -9,23 +9,30 @@ import Gaming from "./Gaming";
 import Videos from "./Videos";
 import Storypage from "./storypage";
 import User from "./user";
+import { useState } from "react";
+
+
+export const useridContext = React.createContext()
 
 
 
+function MainComponent() { 
 
-function MainComponent() {
+  const [selfId, setSelfId] = useState("507")
 
-  
-   
     
 
   return (
     <div >   
         
       <BrowserRouter>
+
+      <useridContext.Provider value={[selfId]}>  
+    
+        
         <div className="navbar">
           <Navbar />
-   </div>
+      </div>
 
         
 
@@ -40,6 +47,9 @@ function MainComponent() {
           
 
         </Routes>
+
+       
+        </useridContext.Provider>
       </BrowserRouter>
     </div>
   );

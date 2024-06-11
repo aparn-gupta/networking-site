@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import SidebarRow from './SidebarRow'
 import { Avatar } from '@mui/material'
 import Diversity3Icon from '@mui/icons-material/Diversity3';
@@ -11,14 +11,41 @@ import FlagIcon from '@mui/icons-material/Flag';
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import { Link } from 'react-router-dom';
 
+import { useridContext } from './MainComponent';
+import { userData } from './userComponents/userData';
+
+
+
 
 
 
 const Sidebar = () => {
+
+  const [selfId, setSelfId] = React.useContext(useridContext)
+ 
+
+  let currentUser = {}
+ 
+  
+  for (let each of userData) {
+    if (each.userId === parseInt(selfId)) {
+      currentUser = each
+
+
+    }
+  }
+
+ 
+
+
+
+
+
+
   return (
     <div className='w-1/3 mt-14'>
 
-       <Link to = "/users/:userid" >  <SidebarRow  photo =  {<Avatar src="https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg" />} title = "Ben"/> </Link>
+       <Link to = {`/users/${selfId}`} >  <SidebarRow  photo =  {<Avatar src={currentUser.pfpSrc } />} title = {currentUser.username}/> </Link>
         <SidebarRow  icon =  {<Diversity3Icon  className='text-pink-600'/>}  title = "Friends"/>
         <SidebarRow  icon =  {<WatchLaterIcon  className='text-pink-600'/>}  title = "Memories"  />
         <SidebarRow  icon = {<BookmarksIcon  className='text-pink-600'  /> } title = "Saved" />

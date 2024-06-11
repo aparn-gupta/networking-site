@@ -8,7 +8,7 @@ import { userData } from './userComponents/userData';
 
 
 
-const Postform = () => {
+const EmotionPostform = (props) => {
 
     const handleSubmit = () => {        
         
@@ -16,6 +16,7 @@ const Postform = () => {
 
 
     const [isShowing, setIsShowing] = React.useContext(formContext)
+
 
     const [selfId, setSelfId] = React.useContext(useridContext)
     let currentUser = {} 
@@ -27,8 +28,6 @@ const Postform = () => {
 
     }
   }
-    
-
  
    
    
@@ -39,14 +38,18 @@ const Postform = () => {
 
   return (
     <div className='popup' >
+
+
+       
        
         
 
-        <div className=' flex justify-between mb-5 my-2'>    <h1 className='font-bold text-lg ml-28'>  Create New Post </h1>  <div  onClick={handleClick}  >  <CloseIcon />   </div>  </div>
+        <div className=' flex justify-between mb-4 my-2'>    <h1 className='font-bold text-lg ml-28'>  Create New Post </h1>  <div  onClick={handleClick}  >  <CloseIcon />   </div>  </div>
  
-        <div className='flex'>   <Avatar src= {currentUser.pfpSrc}  />   <div className='m-2'> {currentUser.username}  </div>  </div>
+        <div className='flex'>   <Avatar src= {currentUser.pfpSrc}  />   <div className='m-2 text-lg'>  {currentUser.username}  </div> 
+        <div className='flex justify-center mt-2 text-lg'> is feeling <p className='text-yellow-400 font-bold mx-2 capitalize'>   {props.feeling} </p>today! </div> </div>
  
- 
+      
         
          <div className=''>
              <form onSubmit={handleSubmit}> 
@@ -63,4 +66,4 @@ const Postform = () => {
   )
 }
 
-export default Postform
+export default EmotionPostform
