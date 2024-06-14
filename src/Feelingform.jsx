@@ -1,23 +1,44 @@
-import { Avatar } from '@mui/material'
-import React from 'react'
-import CloseIcon from '@mui/icons-material/Close';
-import { formContext } from './InputBox';
+import React, { useContext } from 'react'
 import { useState } from 'react';
-import Postform from './postform';
 import EmotionPostform from './PostformwithEmotion';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import { feelingformContext } from './InputBox';
 
-
-export const emotionContext = React.createContext()
+export const emotionformContext = React.createContext()
 
 
 const Feelingform = () => {
 
     const [selectedEmotion, setSelectedEmotion] = useState(null)
-    const [formWithEmotionStyling, setFormWithEmotionStyling] = useState({display: "none"})
+    const [formWithEmotionStyling, setFormWithEmotionStyling] = useState("false")
+    const [isShowingfFeelingForm, setIsShowingFeelingForm] = useContext(feelingformContext)
+
+    let styling = {display: "none"}
+
+    if (formWithEmotionStyling === "true") {
+        styling = {display: "block"}
+
+     }
+
+     else if (formWithEmotionStyling === "false")  {
+        styling = {display: "none"}
+
+    } 
+
+
+
+  
+
+   
     const handleClick = () => {
         if (selectedEmotion) {
-            setFormWithEmotionStyling({display: "block"})
+            setFormWithEmotionStyling("true")
         }
+
+    }
+
+    const handleClickforBack = () => {
+        setIsShowingFeelingForm(prev => !prev)
 
     }
 
@@ -44,11 +65,19 @@ const emotions = ["happy", "sad", "enthusiastic", "disgusted", "excited", "angry
 
 
   return (
-    <emotionContext.Provider>
+
+    <emotionformContext.Provider value={ [formWithEmotionStyling, setFormWithEmotionStyling]}>
+  
         <div className='popup' >
+
+        <div className='flex justify-between'>
+        <KeyboardBackspaceIcon className='text-white' onClick={handleClickforBack} />   
+        <h1 className='text-lg font-bold mb-6 mr-16'>  How are you feeling today? </h1>
+        </div>
+       
        
        <form> 
-           <h1 className='text-lg font-bold mb-6 flex justify-center'>  How are you feeling today? </h1>
+         
             <div className=' flex justify-center'>
             <div>
             { emotions.map(item => 
@@ -60,14 +89,16 @@ const emotions = ["happy", "sad", "enthusiastic", "disgusted", "excited", "angry
              <div className='bg-pink-800 text-white font-bold w-20 flex justify-center mt-10' onClick={handleClick}> Submit  </div>   
 
        </form>
-       <div style={formWithEmotionStyling}> <div className='screenbox'> <EmotionPostform feeling = {selectedEmotion} />  </div>  </div>
-
+       
+       <div style={styling}> <div className='screenbox'> <EmotionPostform feeling = {selectedEmotion} />  </div>  </div>
+      
       
             
      
       
     </div>
-    </emotionContext.Provider>
+    </emotionformContext.Provider>
+  
    
   )
 }

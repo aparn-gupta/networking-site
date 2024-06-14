@@ -10,7 +10,10 @@ import { userData } from './userComponents/userData';
 
 const Postform = () => {
 
-    const handleSubmit = () => {        
+    const handleSubmit = (e) => {      
+      e.preventDefault()  
+      setIsShowing(prev => !prev)     
+     
         
     }
 
@@ -42,7 +45,7 @@ const Postform = () => {
        
         
 
-        <div className=' flex justify-between mb-5 my-2'>    <h1 className='font-bold text-lg ml-28'>  Create New Post </h1>  <div  onClick={handleClick}  >  <CloseIcon />   </div>  </div>
+        <div className=' flex justify-between mb-5 my-2'>    <h1 className='font-bold text-lg ml-28'>  Create New Post </h1> <CloseIcon  onClick={handleClick} className='text-white'/>  </div> 
  
         <div className='flex'>   <Avatar src= {currentUser.pfpSrc}  />   <div className='m-2'> {currentUser.username}  </div>  </div>
  

@@ -13,6 +13,7 @@ import { userData } from './userComponents/userData';
 
 
 export const formContext =  React.createContext()
+export const feelingformContext = React.createContext()
 
 const InputBox = () => {
 
@@ -54,9 +55,12 @@ const [selfId, setSelfId] = React.useContext(useridContext)
     <div className='m-3 p-4 bg-white rounded-xl shadow-lg border-2 border-slate-200' > 
     <formContext.Provider value={ [isShowing, setIsShowing] }>
     <div style={displayCreatePostForm}> <div className='screenbox'> <Postform />  </div>  </div>
-    <div style={displayFeelingForm}> <div className='screenbox'> <Feelingform />  </div>  </div>
-
     </formContext.Provider>
+    <feelingformContext.Provider value={ [isShowingfFeelingForm, setIsShowingFeelingForm]}> 
+    <div style={displayFeelingForm}> <div className='screenbox'> <Feelingform />  </div>  </div>
+    </feelingformContext.Provider>
+
+   
   
 
      

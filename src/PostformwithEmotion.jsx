@@ -1,21 +1,37 @@
 import { Avatar } from '@mui/material'
-import React from 'react'
-import CloseIcon from '@mui/icons-material/Close';
-import { formContext } from './InputBox';
+import React, { useContext } from 'react'
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+
 import { useridContext } from './MainComponent';
 import { userData } from './userComponents/userData';
+
+import { emotionformContext } from './Feelingform';
 
 
 
 
 const EmotionPostform = (props) => {
 
-    const handleSubmit = () => {        
+    const handleSubmit = () => {   
+    
+     
         
     }
 
+    const [formWithEmotionStyling, setFormWithEmotionStyling] = useContext(emotionformContext)
 
-    const [isShowing, setIsShowing] = React.useContext(formContext)
+   
+    const handleClick = () => {
+      console.log("pineapple")
+      setFormWithEmotionStyling("false" )
+       
+     
+      
+
+    }
+
+
+   
 
 
     const [selfId, setSelfId] = React.useContext(useridContext)
@@ -31,34 +47,34 @@ const EmotionPostform = (props) => {
  
    
    
-   const handleClick = () => {  
-    setIsShowing(prev => !prev)     
-     } 
+ 
 
 
   return (
-    <div className='popup' >
+    <div className='emoform' >
 
 
        
        
         
 
-        <div className=' flex justify-between mb-4 my-2'>    <h1 className='font-bold text-lg ml-28'>  Create New Post </h1>  <div  onClick={handleClick}  >  <CloseIcon />   </div>  </div>
+      <div >
+      <div className=' flex justify-between mb-4 my-2'>    <KeyboardBackspaceIcon onClick={handleClick} className='text-white'/>   <h1 className='font-bold text-lg mr-40'>  Create New Post </h1>   </div>
  
-        <div className='flex'>   <Avatar src= {currentUser.pfpSrc}  />   <div className='m-2 text-lg'>  {currentUser.username}  </div> 
-        <div className='flex justify-center mt-2 text-lg'> is feeling <p className='text-yellow-400 font-bold mx-2 capitalize'>   {props.feeling} </p>today! </div> </div>
+ <div className='flex'>   <Avatar src= {currentUser.pfpSrc}  />   <div className='m-2 text-lg'>  {currentUser.username}  </div> 
+ <div className='flex justify-center mt-2 text-lg'> is feeling <p className='text-yellow-400 font-bold mx-2 capitalize'>   {props.feeling} </p>today! </div> </div>
+
+
  
+  <div className=''>
+      <form onSubmit={handleSubmit}> 
+     <div className='flex justify-center'>  <input className=  'border-slate-600 border p-2 m-5 h-44 w-96 ' placeholder="What's on your mind?"/>    </div>
+      <div> <input type='file' className='m-1 justify-center' />  </div>
+      <button type= "submit"  className='bg-pink-900 w-28 h-8  border border-red-500  text-white m-1' > Post   </button> 
+      </form> 
+   </div>
       
-        
-         <div className=''>
-             <form onSubmit={handleSubmit}> 
-            <div className='flex justify-between'>  <input className=  'border-slate-600 border p-2 m-5 h-44 w-80 ' placeholder="What's on your mind?"/>    </div>
-             <input type='file' className='m-1' /> 
-             <button type= "submit"  className='bg-pink-900 w-28 h-8  border border-red-500  text-white m-1' > Post   </button> 
-             </form> 
-          </div>
-             
+      </div>
       
        
      </div>

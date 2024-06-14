@@ -43,23 +43,25 @@ const Stories = () => {
 
 
 
-<div  className='flex justify-between '>    
-   {renderedStorydata.map(item => 
-   <Indistory  key = {item.id} 
-     userId = {item.userId}
-     id = {item.id}  
-     src = {item.src} 
-     imagesrc = {item.imagesrc} 
-     url = {item.url}
-     name = {item.name}/>)}     
-  </div> 
+<div className=''>
+<div  className='flex  '>   
+
+{renderedStorydata.map(item => 
+<Indistory  key = {item.id} 
+  userId = {item.userId}
+  id = {item.id}  
+  src = {item.src} 
+  imagesrc = {item.imagesrc} 
+  url = {item.url}
+  name = {item.name}/>)}     
+</div> 
+</div>
 
 
   <div className='flex justify-between'> 
+  <IconButton sx={{backgroundColor: 'gainsboro'}} >   <ArrowBackIosNewOutlinedIcon  className='text-pink-400 ' onClick={handleBackbutton} /> </IconButton> 
 
-    
-   <IconButton>   <ArrowBackIosNewOutlinedIcon  className='text-pink-400 ' onClick={handleBackbutton} /> </IconButton>
-    <IconButton>  <ArrowForwardIosOutlinedIcon className='text-pink-400 ' onClick={handleForwardbutton} />   </IconButton>
+    <IconButton sx={{backgroundColor: 'gainsboro'}}>  <ArrowForwardIosOutlinedIcon className='text-pink-400 ' onClick={handleForwardbutton} />   </IconButton>
   
 
  </div>

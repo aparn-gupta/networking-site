@@ -10,6 +10,8 @@ import Videos from "./Videos";
 import Storypage from "./storypage";
 import User from "./user";
 import { useState } from "react";
+// import Login from "./login";
+import { userData } from "./userComponents/userData";
 
 
 export const useridContext = React.createContext()
@@ -18,17 +20,98 @@ export const useridContext = React.createContext()
 
 function MainComponent() { 
 
-  const [selfId, setSelfId] = useState("507")
+
+
+
+
+  const [usernameInput, setUsernameInput] = useState("")
+  const [userpassword, setUserPassword] = useState("")
+  const [passwordmatchMessage, setPasswordmatchMessage] = useState("")
+  // const [formStyle, setformStyle] = useState({display : "block"})
+  const [reqdUser, setReqdUser] = useState({})
+  const [selfId, setSelfId] = useState(null)
+  const [loggedin, setLoggedin] = useState(false)
+
+
+
+  const formStyle = loggedin ? {display: "none"} : {display: "block"}
+
+
+
+ 
+
+  const handleSubmit = () => {
+   
+    for (let each of userData) {
+      if (each.username === usernameInput) {
+        setReqdUser(each)
+        setSelfId(each.userId)
+      }
+     
+    }
+
+    if (userpassword !== reqdUser.password) {
+      setPasswordmatchMessage("Incorrect credentials")
+    }
+    else if (userpassword === reqdUser.password) {
+     
+      setLoggedin(prev => !prev)
+      
+     
+    } 
+
+
+  }
+
+ 
+
+
+
+
 
     
 
   return (
     <div >   
+
+
         
       <BrowserRouter>
 
-      <useridContext.Provider value={[selfId]}>  
+      <useridContext.Provider value={[selfId, setSelfId] }> 
+
+         <div style={formStyle}>
+   <div className='loginscreenbox'>
+    <div className='loginbox'>
+       <form >
+       
+        <label htmlFor='username' > Username </label>
+        <input className='w-60 h-8 border-2 p-1 border-slate-500 mb-4' name='username' id = 'username' type='text' value={usernameInput} onChange={(e) => setUsernameInput(e.target.value) }  />
+        <br/>
+        <label htmlFor='password'>Password </label>
+        <input className='w-60 h-8 border-2 p-1 border-slate-500' name= 'password' id='password' type='password' value={userpassword} onChange={(e) => setUserPassword(e.target.value) }  />
+       <div className=''>  <div  onClick={handleSubmit}  className='bg-pink-700 w-20 p-0.5 h-8 text-white border-2 border-pink-900 mt-6'> Submit </div> </div>
+       <div className='text-red-500 w-40 mt-3'> {passwordmatchMessage} </div>    
+       </form>      
+    </div>
+   </div>
+
+ </div> 
+
+
+
+
+
+
+
+
+
+
     
+    
+    
+    {/* <Login /> */}
+
         
         <div className="navbar">
           <Navbar />

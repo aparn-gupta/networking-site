@@ -1,16 +1,21 @@
 import { Avatar } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react'
 import { messageData } from './MessageData'
 import OpenMessenger from './OpenMessenger'
 import { useState } from 'react'
+import CloseIcon from '@mui/icons-material/Close';
+import { showMessengerContext } from './Navbar'
 
 
+
+export const OpenMessengerContext = React.createContext()
 
 
 const Messenger = () => {
 
   const [meseengerOpened, setMessengerOpened] = useState(false)
   const [openMessengerData, setOpenMessengerData] = useState({})
+  const [showMessenger, setShowMessenger] = useContext(showMessengerContext)
 
   
 
@@ -24,6 +29,11 @@ const Messenger = () => {
   
       }
     }
+
+  }
+
+  const handleCloseButtonClick = () => {
+    setShowMessenger(prev => !prev)
 
   }
 
@@ -43,12 +53,13 @@ const Messenger = () => {
 
 
   return (
+    <OpenMessengerContext.Provider value= {[meseengerOpened, setMessengerOpened]}> 
     <div className='notifications'>
       <div className=''>  <div style = {styling} >  <OpenMessenger src = {openMessengerData.src} username = {openMessengerData.username}  message = {openMessengerData.message}  />  </div> </div>
 
     
        <div className='p-5'> 
-       <h1 className='font-bold text-xl my-2'> Messages  </h1>
+       <div className='flex justify-between'> <h1 className='font-bold text-xl my-2'> Messages  </h1>  <CloseIcon  onClick = {handleCloseButtonClick} /> </div>
 
       {messageData.map(item => 
            <div id={item.id} className='flex' onClick={handleClick} >
@@ -65,6 +76,7 @@ const Messenger = () => {
        </div>
       
     </div>
+    </OpenMessengerContext.Provider>
   )
 }
 

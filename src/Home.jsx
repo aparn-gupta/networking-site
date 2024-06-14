@@ -11,17 +11,11 @@ const Home = () => {
 
 
   return (
-    <div className=''>
+    <div className=''>    
 
-      <div className="flex "  id="popupbox "   >
+      <Sidebar />    
 
-      <Sidebar />
-      <Stories />
-      </div>
-
-    
-
-
+      <div className='flex justify-center'> <Stories />  </div>
 
       
     </div>

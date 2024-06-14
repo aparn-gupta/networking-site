@@ -84,9 +84,60 @@
     
     z-index: 1000; 
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
-    padding: 2.5rem;
+    padding: 1rem;
     transform: translate(-30%, -0%);
    
 
 
+}
+
+
+.emoform {
+   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(156, 163, 171);   
+    width: 32rem;
+    height: 28rem;   
+    position: fixed;
+    z-index: 1000; 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+    padding: 1.5rem;
+    
+
+
+}
+
+
+.loginbox {
+   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(156, 163, 171);   
+    width: 20rem;
+    height: 20rem;   
+    position: fixed;
+    z-index: 1000; 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+    padding: 3rem;
+   
+
+
+}
+
+
+
+
+.loginscreenbox  {
+    width: 1500px;
+    height: 850px;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    
+    
 }

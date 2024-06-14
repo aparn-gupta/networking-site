@@ -43,7 +43,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className='w-1/3 mt-14'>
+    <div className='w-1/3 mt-14 fixed mr-96'>
 
        <Link to = {`/users/${selfId}`} >  <SidebarRow  photo =  {<Avatar src={currentUser.pfpSrc } />} title = {currentUser.username}/> </Link>
         <SidebarRow  icon =  {<Diversity3Icon  className='text-pink-600'/>}  title = "Friends"/>

@@ -1,13 +1,18 @@
 import { Avatar } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react'
 import SendIcon from '@mui/icons-material/Send';
 import { useState } from 'react';
+import CloseIcon from '@mui/icons-material/Close';
+import { OpenMessengerContext } from './messenger';
 
 const OpenMessenger = (props) => {
 
     const [userData, setUserData] = useState([])
     const [userMessage, setUserMessage] = useState("")
     const [showUserMessage, setShowUserMessage] = useState({display: "none"})
+
+
+    const [meseengerOpened, setMessengerOpened] = useContext(OpenMessengerContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -23,12 +28,18 @@ const OpenMessenger = (props) => {
 
     }
 
+    const handleClick = () => {
+      setMessengerOpened(prev => !prev)
+
+    }
+
 
 
   return (
     <div className='openmessenger'>
+      <div className='relative'> <CloseIcon className='absolute right-0' onClick={handleClick} />  </div>
 
-       <div className='flex justify-center px-4'>
+       <div className='flex justify-center px-4 mt-8'>
      
       <Avatar src= {props.src}/>
              
@@ -45,10 +56,14 @@ const OpenMessenger = (props) => {
        <div style = {showUserMessage} > <p  className='mt-5 bg-slate-500 rounded-3xl py-3 px-4 leading-tight text-sm'> {userMessage}   </p>  </div>  
      
      <form onSubmit={handleSubmit} >
-     <div className='flex'>
-     <input type='text' className='mt-8 w-48 h-16 px-3' placeholder='Write message' onChange={handleChange} value = {userData} />
+      
+      <div className='flex justify-center'>
+     <input type='text' className='mt-8 w-48 h-16 px-3 ml-8' placeholder='Write message' onChange={handleChange} value = {userData} />
      <button type='submit'> <SendIcon className='mt-8 text-purple-500 ml-2'/> </button>
-     </div>
+       </div>
+        
+     
+    
      </form>
        </div>
 

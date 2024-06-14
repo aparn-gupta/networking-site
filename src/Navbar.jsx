@@ -23,6 +23,9 @@ import { useridContext } from './MainComponent';
 import { userData } from './userComponents/userData';
 
 
+export const showMessengerContext = React.createContext()
+
+
 
 
 const Navbar = () => {
@@ -77,6 +80,8 @@ const Navbar = () => {
 
 
   return (
+
+    <showMessengerContext.Provider value={[showMessenger, setShowMessenger]}> 
     <div className='p-1 flex justify-between shadow-lg bg-white '>
       <div className='flex justify-between '> 
          <Link to="/" > <img className='h-12 w-12 rounded-full' src='https://blog.spoongraphics.co.uk/wp-content/uploads/2011/02/Untitled-1.jpg' />  </Link>
@@ -123,6 +128,7 @@ const Navbar = () => {
         
       
     </div>
+    </showMessengerContext.Provider>
   )
 }
 
