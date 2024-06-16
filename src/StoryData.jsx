@@ -16,13 +16,7 @@ const Storydata = [
          name: "James McGill"
        
     },
-    {
-        id: 103,
-        userId: 503,
-        src: "https://th.bing.com/th/id/R.6f44c3a17277ddb557e9c7e08a73025f?rik=UyUTKgA3NGLeWA&riu=http%3a%2f%2fimages.amcnetworks.com%2famc.com%2fwp-content%2fuploads%2f2015%2f01%2fCBS-S2-Portraits-800x600_Mike_0061_V4.jpg&ehk=QfJL%2b3bSgJVSS%2bfRNalUQ9DaJ%2fwRkIN0FKdC2jPcyRs%3d&risl=&pid=ImgRaw&r=0",
-        url: "https://youtu.be/7TavVZMewpY?si=U4L6EmBXonG5tBnk",
-        name: "Michael Ehrmantraut"
-    },
+ 
     {
         id: 104,
         userId: 504,
@@ -34,7 +28,7 @@ const Storydata = [
         id: 105,
         userId: 505,
         src: "https://th.bing.com/th/id/R.f11b69019e08a90eee8a18b9b03c866e?rik=EWFh1CAcRStkaQ&riu=http%3a%2f%2fwww.cartoonbucket.com%2fwp-content%2fuploads%2f2015%2f05%2fPikachu-Running-Picture.png&ehk=LRh%2ftfeNy6AJxn4X6ak6X9TMz3tkSsW0LQOjGwo5A%2bI%3d&risl=&pid=ImgRaw&r=0",
-        imagesrc: "https://s1.zerochan.net/Kasumi.(Pok%C3%A9mon).600.2609593.jpg",
+        imagesrc: "https://www.fonewalls.com/wp-content/uploads/Beautiful-Scenery-Mountains-Lake-Wallpaper-1080x1920.jpg",
          name: "Pikachu"
     
         },
@@ -42,7 +36,7 @@ const Storydata = [
             id: 106,
             userId: 506,
             src: "https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg",
-             imagesrc: "https://cdn.shopify.com/s/files/1/2123/8425/products/51568463-LRG_530x.jpg?v=1578661687",
+             imagesrc: "https://wallpapercave.com/wp/wp4600553.jpg",
              name: "Ben Tennyson"
            
         },
@@ -64,7 +58,7 @@ const Storydata = [
             },
             {    
                 id: 110,
-                userId: 509,
+                userId: 514,
                 src: "",
                  imagesrc: "https://wallpapercave.com/wp/wp4600553.jpg",
                  name: "Stephan"
@@ -72,7 +66,7 @@ const Storydata = [
             },
             {
                 id: 108,
-                userId: 510,
+                userId: 513,
                 src: "https://img.ecartelera.com/noticias/58800/58846-m.jpg?v=2.0",
                 imagesrc: "https://annoyingrambles.files.wordpress.com/2014/12/inception_poster01.jpg",
                 name: "Steve"
@@ -90,6 +84,13 @@ const Storydata = [
                 src: "https://img.ecartelera.com/noticias/58800/58846-m.jpg?v=2.0",
                 imagesrc: "https://flxt.tmsimg.com/assets/p12037541_b_v8_ay.jpg",
                 name: "Franscesca"
+            },
+            {
+                id: 103,
+                userId: 503,
+                src: "https://th.bing.com/th/id/R.6f44c3a17277ddb557e9c7e08a73025f?rik=UyUTKgA3NGLeWA&riu=http%3a%2f%2fimages.amcnetworks.com%2famc.com%2fwp-content%2fuploads%2f2015%2f01%2fCBS-S2-Portraits-800x600_Mike_0061_V4.jpg&ehk=QfJL%2b3bSgJVSS%2bfRNalUQ9DaJ%2fwRkIN0FKdC2jPcyRs%3d&risl=&pid=ImgRaw&r=0",
+                url: "https://youtu.be/7TavVZMewpY?si=U4L6EmBXonG5tBnk",
+                name: "Michael Ehrmantraut"
             },
   
   

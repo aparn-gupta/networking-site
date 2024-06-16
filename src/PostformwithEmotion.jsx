@@ -6,32 +6,37 @@ import { useridContext } from './MainComponent';
 import { userData } from './userComponents/userData';
 
 import { emotionformContext } from './Feelingform';
+import { feelingformContext } from './InputBox';
 
 
 
 
 const EmotionPostform = (props) => {
 
-    const handleSubmit = () => {   
-    
-     
-        
-    }
+   
 
     const [formWithEmotionStyling, setFormWithEmotionStyling] = useContext(emotionformContext)
+    const [isShowingfFeelingForm, setIsShowingFeelingForm] = useContext(feelingformContext)
+    
+    
+
 
    
     const handleClick = () => {
       console.log("pineapple")
       setFormWithEmotionStyling("false" )
        
-     
-      
+          
 
     }
 
-
-   
+    const handleSubmit = (e) => { 
+      e.preventDefault()
+      setFormWithEmotionStyling("false" )  
+      setIsShowingFeelingForm(prev => !prev)    
+     
+        
+    }   
 
 
     const [selfId, setSelfId] = React.useContext(useridContext)

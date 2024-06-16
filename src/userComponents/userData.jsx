@@ -7,11 +7,12 @@ export const userData = [
         pfpSrc: "https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg",
         coverpicsrc: "https://th.bing.com/th/id/R.6876a7d9c77c21d84321b4260ab0fe13?rik=CoB48Ost6OpbVg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fb%2f6%2f0%2f1012101-ben-10-wallpapers-1920x1080-ios.jpg&ehk=OzX%2fSPh%2b9lQfg3qJIlHljDIW6NqqB2M8kCAtvBC6MlM%3d&risl=&pid=ImgRaw&r=0",
     },
-    {   password: "efgh",
+    {   password: "ReactBootstrap",
+        userId: 510,
         id: 402,
-        username: "Kitty de Toodles",
+        username: "Abhishek Kumar",
         friendsCount: 752,
-        pfpSrc: "https://www.goodfreephotos.com/albums/other-landscapes/mountains-and-pond-landscape-with-majestic-scenery.jpg",
+        pfpSrc: "https://media.licdn.com/dms/image/C4E03AQGdC0Vm6_gtYw/profile-displayphoto-shrink_400_400/0/1517590757105?e=1723680000&v=beta&t=3PScnPrWOlhFOEWri0rBhYjd_uSfQC6gk7WBUtfIBfs",
         coverpicsrc: "https://wallpapertag.com/wallpaper/full/6/c/1/434699-popular-cute-kitten-wallpapers-2560x1440.jpg"
     },
     
@@ -81,13 +82,7 @@ export const userData = [
         coverpicsrc: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/02/tom-and-jerry-2021-movie-6.jpeg"
     },
     
-    // {
-    //     userId: 510,
-    //     username: "Thomas",
-    //     friendsCount: 3576,
-    //     pfpSrc: "",
-    //     coverpicsrc: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/02/tom-and-jerry-2021-movie-6.jpeg"
-    // },
+
 ]
 
 

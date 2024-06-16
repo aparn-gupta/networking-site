@@ -43,9 +43,9 @@ const Sidebar = () => {
 
 
   return (
-    <div className='w-1/3 mt-14 fixed mr-96'>
+    <div className='w-1/3 mt-16 fixed mr-96 h-192 '>
 
-       <Link to = {`/users/${selfId}`} >  <SidebarRow  photo =  {<Avatar src={currentUser.pfpSrc } />} title = {currentUser.username}/> </Link>
+       <Link to = {`/users/${selfId}`} >  <SidebarRow  photo =  {<Avatar src={currentUser.pfpSrc }  />} title = {currentUser.username}/> </Link>
         <SidebarRow  icon =  {<Diversity3Icon  className='text-pink-600'/>}  title = "Friends"/>
         <SidebarRow  icon =  {<WatchLaterIcon  className='text-pink-600'/>}  title = "Memories"  />
         <SidebarRow  icon = {<BookmarksIcon  className='text-pink-600'  /> } title = "Saved" />

@@ -39,7 +39,7 @@ const Stories = () => {
   
   return (
     
-   <div className='w-2/5 mt-16'  > 
+   <div className='w-2/5 mt-20'  > 
 
 
 

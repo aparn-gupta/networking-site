@@ -62,7 +62,7 @@ const Messenger = () => {
        <div className='flex justify-between'> <h1 className='font-bold text-xl my-2'> Messages  </h1>  <CloseIcon  onClick = {handleCloseButtonClick} /> </div>
 
       {messageData.map(item => 
-           <div id={item.id} className='flex' onClick={handleClick} >
+           <div id={item.id} className='flex hover:bg-slate-100' onClick={handleClick} >
            <Avatar id={item.id} className='my-4' src={item.src} />
            <div id={item.id} className='m-2'>
              <p id={item.id} className='font-bold'> {item.username} </p>

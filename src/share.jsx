@@ -31,7 +31,7 @@ const Share = (props) => {
      
 
 
-      <div className='flex justify-between' >   <p className='text-lg font-bold ml-32'>  Share  {props.currentuser}'s Post </p> <CloseIcon onClick = {handleClick}      />  </div>
+      <div className='flex justify-between' >   <p className='text-lg font-bold ml-32'>  Share Post </p> <CloseIcon onClick = {handleClick}      />  </div>
       <div className=' mt-4 mb-6 flex font-bold' >   <Avatar src={props.src} /> <p className='ml-3'> {props.name}  </p> </div>
 
        {/* {props.imagesrc &&  <div className='flex justify-center mb-12'>  <img className='w-32 h-32' src= {props.imagesrc} />      </div>}

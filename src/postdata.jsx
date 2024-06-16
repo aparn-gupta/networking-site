@@ -83,6 +83,17 @@ const postdata = [
         text: "Seize the day!",
       
         likes: "139"
+    },
+    {
+        id: 9,
+        userId: 510,
+        src: "https://media.licdn.com/dms/image/C4E03AQGdC0Vm6_gtYw/profile-displayphoto-shrink_400_400/0/1517590757105?e=1723680000&v=beta&t=3PScnPrWOlhFOEWri0rBhYjd_uSfQC6gk7WBUtfIBfs",
+        name: "Abhishek Kumar",
+        time: "03:35",
+        text: "Curious Kittens!",
+        imagesrc: "https://d3n8a8pro7vhmx.cloudfront.net/humanesocietyvc/pages/262/attachments/original/1434757425/kittens!!!!.jpg?1434757425",
+      
+        likes: "5896"
     }
 ]
 

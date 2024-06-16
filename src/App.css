@@ -16,7 +16,7 @@
 .navbar {
     z-index: 1001;
     position: fixed;
-    width: 1340px;
+    width: 1330px;
     
 }
 
@@ -48,6 +48,18 @@
     position: fixed;    
     background-color: rgb(225, 234, 234);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.menu {   
+        width: 13rem;
+        height: 30rem;
+        right: 0;
+        top: 4rem;
+        position: fixed;    
+        background-color: rgb(225, 234, 234);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+        padding: 1.2rem;
+
 }
 
 

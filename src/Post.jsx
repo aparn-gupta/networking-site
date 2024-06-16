@@ -91,7 +91,7 @@ const [selfId, setSelfId] = React.useContext(useridContext)
 
 
   const shareboxStyle = showShareBox ?  <div className='screenbox'>
-     <Share src = {currentUser.pfpSrc}  name = {currentUser.username} poster = {props.name} /> 
+     <Share src = {currentUser.pfpSrc}  name = {currentUser.username}  /> 
       </div> : null
   showShareBox ?  document.body.classList.add("stopscrolling") : document.body.classList.remove("stopscrolling")
 
