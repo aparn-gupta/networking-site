@@ -16,6 +16,13 @@ const Storydata = [
          name: "James McGill"
        
     },
+    {
+        id: 103,
+        userId: 503,
+        src: "https://th.bing.com/th/id/R.6f44c3a17277ddb557e9c7e08a73025f?rik=UyUTKgA3NGLeWA&riu=http%3a%2f%2fimages.amcnetworks.com%2famc.com%2fwp-content%2fuploads%2f2015%2f01%2fCBS-S2-Portraits-800x600_Mike_0061_V4.jpg&ehk=QfJL%2b3bSgJVSS%2bfRNalUQ9DaJ%2fwRkIN0FKdC2jPcyRs%3d&risl=&pid=ImgRaw&r=0",
+        imagesrc: "https://wallpapercave.com/wp/wp4600553.jpg",
+        name: "Michael Ehrmantraut"
+    },
  
     {
         id: 104,
@@ -47,6 +54,13 @@ const Storydata = [
             imagesrc: "https://media1.popsugar-assets.com/files/thumbor/0Hi4deDtBvzvPcDKCGnvWl7g9-8/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2016/09/14/090/n/1922283/852a2847526a8813_SIJA060_EC269_H/i/1994-Forrest-Gump.JPG",
             name: "Howard Hamllin"
         },
+        {
+            id: 108,
+            userId: 513,
+            src: "https://img.ecartelera.com/noticias/58800/58846-m.jpg?v=2.0",
+            imagesrc: "https://annoyingrambles.files.wordpress.com/2014/12/inception_poster01.jpg",
+            name: "Steve"
+        },
        
         { 
             id: 109,
@@ -60,22 +74,17 @@ const Storydata = [
                 id: 110,
                 userId: 514,
                 src: "",
-                 imagesrc: "https://wallpapercave.com/wp/wp4600553.jpg",
+                
+                 url: "https://youtu.be/7TavVZMewpY?si=U4L6EmBXonG5tBnk",
                  name: "Stephan"
                
             },
-            {
-                id: 108,
-                userId: 513,
-                src: "https://img.ecartelera.com/noticias/58800/58846-m.jpg?v=2.0",
-                imagesrc: "https://annoyingrambles.files.wordpress.com/2014/12/inception_poster01.jpg",
-                name: "Steve"
-            },
+          
             {
                 id: 111,
                 userId: 511,
                 src: "https://th.bing.com/th/id/R.6f44c3a17277ddb557e9c7e08a73025f?rik=UyUTKgA3NGLeWA&riu=http%3a%2f%2fimages.amcnetworks.com%2famc.com%2fwp-content%2fuploads%2f2015%2f01%2fCBS-S2-Portraits-800x600_Mike_0061_V4.jpg&ehk=QfJL%2b3bSgJVSS%2bfRNalUQ9DaJ%2fwRkIN0FKdC2jPcyRs%3d&risl=&pid=ImgRaw&r=0",
-                url: "https://youtu.be/7TavVZMewpY?si=U4L6EmBXonG5tBnk",
+                url: "https://youtu.be/HJFxTsX0Ok0?si=fGBOv0RvdL0TECke",
                 name: "Rebecaa"
             },
             {
@@ -85,13 +94,7 @@ const Storydata = [
                 imagesrc: "https://flxt.tmsimg.com/assets/p12037541_b_v8_ay.jpg",
                 name: "Franscesca"
             },
-            {
-                id: 103,
-                userId: 503,
-                src: "https://th.bing.com/th/id/R.6f44c3a17277ddb557e9c7e08a73025f?rik=UyUTKgA3NGLeWA&riu=http%3a%2f%2fimages.amcnetworks.com%2famc.com%2fwp-content%2fuploads%2f2015%2f01%2fCBS-S2-Portraits-800x600_Mike_0061_V4.jpg&ehk=QfJL%2b3bSgJVSS%2bfRNalUQ9DaJ%2fwRkIN0FKdC2jPcyRs%3d&risl=&pid=ImgRaw&r=0",
-                url: "https://youtu.be/7TavVZMewpY?si=U4L6EmBXonG5tBnk",
-                name: "Michael Ehrmantraut"
-            },
+           
   
   
 ]

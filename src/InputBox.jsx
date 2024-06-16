@@ -76,7 +76,7 @@ const [selfId, setSelfId] = React.useContext(useridContext)
          <Button  sx= {{color: 'black', textTransform: 'capitalize'}} onClick = {handleClickforFeelingForm} >  <EmojiEmotionsIcon className='text-yellow-500 mr-2'  /> Feeling  </Button>
 
         </div>
-       <div className='flex justify-center'>   </div>  </div> 
+      </div> 
        
      
     </div>

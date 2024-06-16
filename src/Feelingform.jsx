@@ -66,9 +66,11 @@ const emotions = ["happy", "sad", "enthusiastic", "disgusted", "excited", "angry
 
   return (
 
-    <emotionformContext.Provider value={ [formWithEmotionStyling, setFormWithEmotionStyling]}>
+  
   
         <div className='popup' >
+
+        <emotionformContext.Provider value={ [formWithEmotionStyling, setFormWithEmotionStyling]}>
 
         <div className='flex justify-between'>
         <KeyboardBackspaceIcon className='text-white' onClick={handleClickforBack} />   
@@ -92,12 +94,12 @@ const emotions = ["happy", "sad", "enthusiastic", "disgusted", "excited", "angry
        
        <div style={styling}> <div className='screenbox'> <EmotionPostform feeling = {selectedEmotion} />  </div>  </div>
       
-      
+       </emotionformContext.Provider>
             
      
       
     </div>
-    </emotionformContext.Provider>
+  
   
    
   )

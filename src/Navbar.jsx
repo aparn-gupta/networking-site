@@ -82,18 +82,18 @@ const Navbar = () => {
   return (
 
     <showMessengerContext.Provider value={[showMessenger, setShowMessenger]}> 
-    <div className='p-1 flex justify-between shadow-lg bg-white '>
-      <div className='flex justify-between '> 
+    <div className='px-2 py-1 flex justify-between shadow-lg bg-white h-16 '>
+      <div className='flex justify-between mr-32'> 
          <Link to="/" > <img className='h-12 w-12 rounded-full' src='https://blog.spoongraphics.co.uk/wp-content/uploads/2011/02/Untitled-1.jpg' />  </Link>
-         <input className='bg-slate-100 rounded-3xl h-10 p-3 mx-3 my-1.5' type='text' placeholder='Search InterAct'/> 
+         <input className='bg-slate-100 rounded-3xl h-10 p-3 mx-3 my-1.5 w-44' type='text' placeholder='Search InterAct'/> 
       </div>        
          
-      <div className='text-slate-500 flex '> 
-      <div className=' flex justify-center hover:bg-slate-100 px-12 py-1.5'> <NavLink to='/'  > <HomeOutlinedIcon sx = {{fontSize: 35}}  />      </NavLink>  </div>
-      <div  className='flex justify-center hover:bg-slate-100 px-12 py-1.5 '>  <NavLink to='/groups' >  <GroupsOutlinedIcon sx = {{fontSize: 35}} />  </NavLink> </div>
-      <div  className='flex justify-center hover:bg-slate-100 px-12 py-2'>    <NavLink to='/videos'>  <OndemandVideoOutlinedIcon sx = {{fontSize: 28}}  />  </NavLink>  </div>
-      <div  className='flex justify-center hover:bg-slate-100 px-12 py-1.5'>  <NavLink to='/gaming'>  <VideogameAssetOutlinedIcon sx = {{fontSize: 35}}  />  </NavLink>  </div>
-      <div  className='flex justify-center hover:bg-slate-100 px-12 py-1.5'>  <NavLink to='/market'>  <StorefrontOutlinedIcon sx = {{fontSize: 30}}  />   </NavLink>     </div>
+      <div className='text-slate-500 flex mr-24'> 
+      <div className=' flex justify-center hover:bg-slate-100 px-11 py-1.5'> <NavLink to='/'  > <HomeOutlinedIcon sx = {{fontSize: 35}}  />      </NavLink>  </div>
+      <div  className='flex justify-center hover:bg-slate-100 px-11 py-1.5 '>  <NavLink to='/groups' >  <GroupsOutlinedIcon sx = {{fontSize: 35}} />  </NavLink> </div>
+      <div  className='flex justify-center hover:bg-slate-100 px-11 py-2'>    <NavLink to='/videos'>  <OndemandVideoOutlinedIcon sx = {{fontSize: 28}}  />  </NavLink>  </div>
+      <div  className='flex justify-center hover:bg-slate-100 px-11 py-1.5'>  <NavLink to='/gaming'>  <VideogameAssetOutlinedIcon sx = {{fontSize: 35}}  />  </NavLink>  </div>
+      <div  className='flex justify-center hover:bg-slate-100 px-11 py-1.5'>  <NavLink to='/market'>  <StorefrontOutlinedIcon sx = {{fontSize: 30}}  />   </NavLink>     </div>
 
 
 
