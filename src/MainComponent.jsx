@@ -81,7 +81,7 @@ function MainComponent() {
        <form >
        
         <label htmlFor='username' > Username </label>
-        <input className='w-60 h-8 border-2 p-1 border-slate-500 mb-4' name='username' placeholder = "Doctor Strange" id = 'username' type='text' value={usernameInput} onChange={(e) => setUsernameInput(e.target.value) }  />
+        <input className='w-60 h-8 border-2 p-1 border-slate-500 mb-4' name='username' placeholder = "Doctor Strange/Pikachu/James McGill/Oswald | Password: abcd" id = 'username' type='text' value={usernameInput} onChange={(e) => setUsernameInput(e.target.value) }  />
         <br/>
         <label htmlFor='password'>Password </label>
         <input className='w-60 h-8 border-2 p-1 border-slate-500' placeolder = "abcd" name= 'password' id='password' type='password' value={userpassword} onChange={(e) => setUserPassword(e.target.value) }  />
