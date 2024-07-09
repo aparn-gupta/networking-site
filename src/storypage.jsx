@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import CreateYourStory from './CreateYourStory';
 
 
 
@@ -82,6 +83,7 @@ for (let i = 0; i < Storydata.length; i++) {
       
        <div  className=' flex justify-between relative  w-1/3 h-176  '>
        <div className='absolute top-5 left-5 flex'><Link to= {`/users/${reqdStory.userId}`}> <div className='flex'>  <Avatar className=' ring-4 ring-pink-600 ' src= {reqdStory.src} /> <p className='  text-white font-bold mx-4  text-lg' > {reqdStory.name}  </p> </div> </Link></div>  
+       <div className='absolute bottom-1/2 left-5 text-white font-bold text-4xl italic'>  {reqdStory.text} </div>
          {reqdStory.imagesrc &&  <img  className='w-full h-160' src= {reqdStory.imagesrc} /> }   {reqdStory.url &&  <ReactPlayer  width="400px" height="630px" url= {reqdStory.url}/>}
         
          </div> 

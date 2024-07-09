@@ -21,7 +21,7 @@ export const userData = [
         id: 403,
         username: "Pikachu",
         friendsCount: 142,
-        pfpSrc: "https://th.bing.com/th/id/R.f11b69019e08a90eee8a18b9b03c866e?rik=EWFh1CAcRStkaQ&riu=http%3a%2f%2fwww.cartoonbucket.com%2fwp-content%2fuploads%2f2015%2f05%2fPikachu-Running-Picture.png&ehk=LRh%2ftfeNy6AJxn4X6ak6X9TMz3tkSsW0LQOjGwo5A%2bI%3d&risl=&pid=ImgRaw&r=0",
+        pfpSrc: "https://static.vecteezy.com/system/resources/previews/024/804/559/original/pikachu-art-or-illustration-on-pickachu-free-vector.jpg",
         coverpicsrc: "https://www.allthingsdogs.com/wp-content/uploads/2019/04/Long-Haired-Chihuahua-Puppies.jpg"
     },
     

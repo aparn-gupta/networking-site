@@ -2,7 +2,7 @@ const postdata = [
     {
         id: 1,
         userId: 505,
-        src: "https://th.bing.com/th/id/R.f11b69019e08a90eee8a18b9b03c866e?rik=EWFh1CAcRStkaQ&riu=http%3a%2f%2fwww.cartoonbucket.com%2fwp-content%2fuploads%2f2015%2f05%2fPikachu-Running-Picture.png&ehk=LRh%2ftfeNy6AJxn4X6ak6X9TMz3tkSsW0LQOjGwo5A%2bI%3d&risl=&pid=ImgRaw&r=0",
+        src: "https://static.vecteezy.com/system/resources/previews/024/804/559/original/pikachu-art-or-illustration-on-pickachu-free-vector.jpg",
         name: "Pikachu",
         time: "12:50",
         text: "Every day is a new beginning.",
@@ -84,17 +84,7 @@ const postdata = [
       
         likes: "139"
     },
-    {
-        id: 9,
-        userId: 510,
-        src: "https://media.licdn.com/dms/image/C4E03AQGdC0Vm6_gtYw/profile-displayphoto-shrink_400_400/0/1517590757105?e=1723680000&v=beta&t=3PScnPrWOlhFOEWri0rBhYjd_uSfQC6gk7WBUtfIBfs",
-        name: "Abhishek Kumar",
-        time: "03:35",
-        text: "Curious Kittens!",
-        imagesrc: "https://d3n8a8pro7vhmx.cloudfront.net/humanesocietyvc/pages/262/attachments/original/1434757425/kittens!!!!.jpg?1434757425",
-      
-        likes: "5896"
-    }
+   
 ]
 
 

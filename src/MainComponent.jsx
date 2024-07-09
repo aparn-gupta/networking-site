@@ -11,6 +11,7 @@ import Storypage from "./storypage";
 import User from "./user";
 import { useState } from "react";
 import { userData } from "./userComponents/userData";
+import CreateStoryPage from "./CreateStoryPage";
 
 
 export const useridContext = React.createContext()
@@ -122,6 +123,7 @@ function MainComponent() {
           <Route path="/gaming" element={<Gaming />} />
           <Route path="/stories/:id" element={<Storypage />} />
           <Route path="/users/:userid" element={<User />} />
+          <Route path="/stories/create" element={<CreateStoryPage />} />
           
 
         </Routes>
