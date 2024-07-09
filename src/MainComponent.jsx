@@ -82,10 +82,10 @@ function MainComponent() {
        <form >
        
         <label htmlFor='username' > Username </label>
-        <input className='w-60 h-8 border-2 p-1 border-slate-500 mb-4' name='username' id = 'username' type='text' value={usernameInput} onChange={(e) => setUsernameInput(e.target.value) }  />
+        <input className='w-60 h-8 border-2 p-1 border-slate-500 mb-4' name='username' placeholder = "Doctor Strange/Pikachu/Oswald" id = 'username' type='text' value={usernameInput} onChange={(e) => setUsernameInput(e.target.value) }  />
         <br/>
         <label htmlFor='password'>Password </label>
-        <input className='w-60 h-8 border-2 p-1 border-slate-500' name= 'password' id='password' type='password' value={userpassword} onChange={(e) => setUserPassword(e.target.value) }  />
+        <input className='w-60 h-8 border-2 p-1 border-slate-500' placeholder = "abcd" name= 'password' id='password' type='password' value={userpassword} onChange={(e) => setUserPassword(e.target.value) }  />
        <div className=''>  <div  onClick={handleSubmit}  className='bg-pink-700 w-24 p-0.5 h-8 flex justify-center text-white border-2 border-pink-900 mt-6'> Submit </div> </div>
        <div className='text-red-600 w-40 mt-3'> {passwordmatchMessage} </div>    
        </form>      

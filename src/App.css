@@ -16,6 +16,7 @@
 .navbar {
     z-index: 1001;
     position: fixed;
+    width: 1500px;
     
     
 }
@@ -144,6 +145,7 @@
     
     
 }
+<<<<<<< HEAD
 
 
 .swiper-button-prev {
@@ -161,3 +163,5 @@
   
     
 }
+=======
+>>>>>>> 45c0a4df6042d02cb9eca38228d737cb9f1edca5
