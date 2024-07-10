@@ -86,7 +86,7 @@ const Storydata = [
                 userId: 514,
                 src: "",
                 
-                 url: "https://youtu.be/7TavVZMewpY?si=U4L6EmBXonG5tBnk",
+                imagesrc: "https://i.pinimg.com/originals/d1/da/9b/d1da9b44dd2e46e2dc65c4b0a92751f0.jpg",
                  name: "Stephan",
                  text: ""
                
@@ -96,7 +96,7 @@ const Storydata = [
                 id: 111,
                 userId: 511,
                 src: "https://th.bing.com/th/id/R.6f44c3a17277ddb557e9c7e08a73025f?rik=UyUTKgA3NGLeWA&riu=http%3a%2f%2fimages.amcnetworks.com%2famc.com%2fwp-content%2fuploads%2f2015%2f01%2fCBS-S2-Portraits-800x600_Mike_0061_V4.jpg&ehk=QfJL%2b3bSgJVSS%2bfRNalUQ9DaJ%2fwRkIN0FKdC2jPcyRs%3d&risl=&pid=ImgRaw&r=0",
-                url: "https://youtu.be/HJFxTsX0Ok0?si=fGBOv0RvdL0TECke",
+                imagesrc: "https://www.lyrical-nonsense.com/wp-content/uploads/2022/08/Euluca-Lab-Living-in-a-World-Without-Magic.jpg",
                 name: "Rebecaa",
                 text: "Your only limit is your mind."
             },

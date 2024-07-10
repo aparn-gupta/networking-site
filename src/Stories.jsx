@@ -9,14 +9,24 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
 import { IconButton } from '@mui/material'
 import CreateYourStory from './CreateYourStory';
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
+
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+
+
+
+
+
 
 
 
@@ -30,6 +40,43 @@ const Stories = () => {
  let usersNewPost =  JSON.parse(localStorage.getItem("mypost"))
 
  let usersNewStory = JSON.parse(localStorage.getItem("newStory"))
+
+
+ function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "pink", borderRadius: "50%"}}
+      onClick={onClick}
+    />
+  );
+}
+
+
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "pink", borderRadius: "50%" }}
+      onClick={onClick}
+    />
+  );
+}
+
+
+ var settings = {
+  dots: false,
+  infinite: false,
+  speed: 1000,
+  slidesToShow: 4,
+  slidesToScroll: 3,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />
+};
+
+
  
   // const [i, setmyIndex] =  React.useState(0)
 
@@ -56,7 +103,8 @@ const Stories = () => {
   
   return (
     
-   <div className='w-2/5 mt-20'  > 
+   <div className='w-2/5 mt-28'  > 
+
 
 
 
@@ -84,6 +132,12 @@ const Stories = () => {
 
  </div> */}
 
+
+
+
+
+
+{/* 
 <Swiper
         className="h-64  "
         modules={[Navigation, Pagination, Scrollbar]}
@@ -91,22 +145,10 @@ const Stories = () => {
         slidesPerView={4}
         navigation 
         
-        scrollbar={{ draggable: true }}
-        
-      >
+        scrollbar={{ draggable: true }}      >
       
     
        <SwiperSlide >
-
-        {/* <CreateYourStory /> */}
-   {/* {  usersNewStory && <Indistory key = {usersNewStory.id} 
-          text= {usersNewStory.text}
-          userId = {usersNewStory.userId}
-          id = {usersNewStory.id}   
-          src = {usersNewStory.src} 
-          imagesrc = {usersNewStory.imagesrc} 
-          url = {usersNewStory.url}
-          name = {usersNewStory.name} />} */}
         
           {usersNewStory ?   <Indistory key = {usersNewStory.id} 
             text= {usersNewStory.text}
@@ -132,7 +174,46 @@ const Stories = () => {
             name = {item.name}/>
           </SwiperSlide>)}        
       
-      </Swiper>   
+      </Swiper>    */}
+
+
+<Slider {...settings}>
+  <div>
+  {usersNewStory ?   <Indistory key = {usersNewStory.id} 
+            text= {usersNewStory.text}
+            userId = {usersNewStory.userId}
+            id = {usersNewStory.id}  
+            src = {usersNewStory.src} 
+            imagesrc = {usersNewStory.imagesrc} 
+            url = {usersNewStory.url}
+            name = {usersNewStory.name}/>  :  <CreateYourStory /> }
+  </div>
+ 
+{Storydata.map(item => 
+  <div>
+    <Indistory  key = {item.id} 
+  userId = {item.userId}
+  id = {item.id}  
+  src = {item.src} 
+  imagesrc = {item.imagesrc} 
+  url = {item.url}
+  name = {item.name}/>
+
+  </div>
+)}     
+      
+    </Slider>
+
+
+
+
+
+
+
+
+
+
+
 
     
     <InputBox />
