@@ -7,7 +7,10 @@ import { Link } from 'react-router-dom';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import CreateYourStory from './CreateYourStory';
+
+
+import { userData } from './userComponents/userData';
+import { useridContext } from './MainComponent';
 
 
 
@@ -18,6 +21,11 @@ const Storypage = () => {
   let myId = useParams()
 
   let reqdStory = {}
+
+
+  let usersNewStory = JSON.parse(localStorage.getItem("newStory"))
+
+
 
 
 //  for (let each of Storydata) {
@@ -51,6 +59,18 @@ for (let i = 0; i < Storydata.length; i++) {
   }
 
 }
+
+
+let currentUser = {}
+const [selfId, setSelfId] = React.useContext(useridContext)
+
+  for (let each of userData) {
+    if (each.userId === parseInt(selfId)) {
+      currentUser = each
+
+
+    }
+  }
 
 
 //  let storyplus = reqdStory.id + 1

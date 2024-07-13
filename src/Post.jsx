@@ -14,9 +14,24 @@ import Share from './share';
 
 import { userData } from './userComponents/userData';
 import { useridContext } from './MainComponent';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 
 export const shareformContext = React.createContext()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,13 +112,43 @@ const [selfId, setSelfId] = React.useContext(useridContext)
 
 
 
+   let usersNewStory = JSON.parse(localStorage.getItem("mypost"))
+
+  const [showDeleteButton, setShowDeleteButton] = useState(false)
+
+
+  const deletePost = () => {
+
+      if (usersNewStory)  {
+        localStorage.removeItem("mypost")
+        window.location.reload()
+      }
+  }
+
+  const deleteButton = showDeleteButton ? <button onClick = {deletePost} className="border-2 border-black p-2 bg-white"> Delete Post </button> : <div></div>
+
+  const openMenu = () => {
+    setShowDeleteButton(prev => !prev)
+
+
+  }
+
+
+
+
+
 
   return (
     <shareformContext.Provider value={[showShareBox, setShowShareBox]}>
-    <div className='w-full  mx-3 p-4  rounded-2xl my-6  bg-white shadow-lg border-2 border-slate-200'>
+    <div className='w-full  mx-3 p-4  rounded-2xl my-6 relative bg-white shadow-lg border-2 border-slate-200'>
       {shareboxStyle}
         <Link to = {`/users/${props.userId}`} > <div className='flex'> <Avatar src={props.src} className='m-1' /> <div className='px-3 flex flex-col'> {props.name}   <div className='text-slate-500 text-xs' > {props.time} </div>   </div> </div>   </Link>
         <div className='py-3'> {props.text} </div>
+
+        {  usersNewStory &&  props.userId === selfId &&  <div className="absolute top-5 right-4 text-black">  <MoreVertIcon  onClick = {openMenu} />  </div>}
+        <div className="absolute top-12 right-3">  {deleteButton} </div>
+
+        
         
        
        { props.imagesrc && <div className='py-2'> <img className='w-full h-112' src= {props.imagesrc}/> </div>}
@@ -137,17 +182,7 @@ const [selfId, setSelfId] = React.useContext(useridContext)
          
          </div>
             
-           </div>
-
-      
-
-
-
-
-
-
-
-           
+           </div>           
 
       
     </div>
