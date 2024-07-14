@@ -46,9 +46,6 @@ const Navbar = () => {
   const MenuBox = showMenu ?  <Menu/>  : null
 
 
-  let userloggedin = JSON.parse(localStorage.getItem("userloggedin"))
-
-
  
 
 
@@ -80,7 +77,8 @@ const Navbar = () => {
   }
 
   const logOut = () => {
-   localStorage.clear()
+    localStorage.removeItem("userloggedin")
+    localStorage.removeItem("LoggedUserId")
     window.location.reload()
 
   }
@@ -106,19 +104,27 @@ const Navbar = () => {
   return (
 
     <showMessengerContext.Provider value={[showMessenger, setShowMessenger]}> 
-    <div className='px-2 py-1 w-screen flex justify-between shadow-lg bg-white h-16 relative'>
-      <div className='flex justify-between'> 
+    <div className='px-2 py-1 flex justify-between shadow-lg bg-white h-16 relative'>
+      <div className='flex justify-between mr-32'> 
          <Link to="/" > <img className='h-12 w-12 rounded-full' src='https://blog.spoongraphics.co.uk/wp-content/uploads/2011/02/Untitled-1.jpg' />  </Link>
          <input className='bg-slate-100 rounded-3xl h-10 p-3 mx-3 my-1.5 w-44' type='text' placeholder='Search InterAct'/> 
       </div>        
          
-      <div className='text-slate-500 flex '> 
-      <div className=' flex justify-center hover:bg-slate-100 px-10 py-1.5'> <NavLink to='/'  > <HomeOutlinedIcon sx = {{fontSize: 35}}  />      </NavLink>  </div>
-      <div  className='flex justify-center hover:bg-slate-100 px-10 py-1.5 '>  <NavLink to='/groups' >  <GroupsOutlinedIcon sx = {{fontSize: 35}} />  </NavLink> </div>
-      <div  className='flex justify-center hover:bg-slate-100 px-10 py-2'>    <NavLink to='/videos'>  <OndemandVideoOutlinedIcon sx = {{fontSize: 28}}  />  </NavLink>  </div>
-      <div  className='flex justify-center hover:bg-slate-100 px-10 py-1.5'>  <NavLink to='/gaming'>  <VideogameAssetOutlinedIcon sx = {{fontSize: 35}}  />  </NavLink>  </div>
-      <div  className='flex justify-center hover:bg-slate-100 px-10 py-1.5'>  <NavLink to='/market'>  <StorefrontOutlinedIcon sx = {{fontSize: 30}}  />   </NavLink>     </div>
+      <div className='text-slate-500 flex mr-24'> 
+      <div className=' flex justify-center hover:bg-slate-100 px-11 py-1.5'> <NavLink to='/'  > <HomeOutlinedIcon sx = {{fontSize: 35}}  />      </NavLink>  </div>
+      <div  className='flex justify-center hover:bg-slate-100 px-11 py-1.5 '>  <NavLink to='/groups' >  <GroupsOutlinedIcon sx = {{fontSize: 35}} />  </NavLink> </div>
+      <div  className='flex justify-center hover:bg-slate-100 px-11 py-2'>    <NavLink to='/videos'>  <OndemandVideoOutlinedIcon sx = {{fontSize: 28}}  />  </NavLink>  </div>
+      <div  className='flex justify-center hover:bg-slate-100 px-11 py-1.5'>  <NavLink to='/gaming'>  <VideogameAssetOutlinedIcon sx = {{fontSize: 35}}  />  </NavLink>  </div>
+      <div  className='flex justify-center hover:bg-slate-100 px-11 py-1.5'>  <NavLink to='/market'>  <StorefrontOutlinedIcon sx = {{fontSize: 30}}  />   </NavLink>     </div>
 
+
+
+      
+    
+    
+     
+     
+      
       </div>
      
 
@@ -130,22 +136,11 @@ const Navbar = () => {
         <IconButton className='h-14 w-14' sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}} onClick={handleClickforNotification}>  <NotificationsIcon sx = {{fontSize: 25}} className='text-black'  />  </IconButton>
         <IconButton className='h-14 w-14' onClick={handleClickforMenu} sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}} >  <MenuIcon sx = {{fontSize: 25}} className='text-black' />  </IconButton>
         <IconButton className='h-14 w-14'sx = {{ backgroundColor: 'gainsboro', marginRight : '0.4rem'}}  onClick={showLogOut} >  <Avatar src= {currentUser.pfpSrc}  />  </IconButton>  
-      
-        {  userloggedin  &&
-           <div>   <div className=''> {notificationbox}  </div>
-           <div className=''> {messengerbox}  </div>
-           <div className=''> {MenuBox}  </div>
-           <div className='absolute top-16 right-5'>{theLogOutButton} </div> </div>
-
-        }
-
-
-
-
-
-        
-        </div>
-    
+        <div className=''> {notificationbox}  </div>
+        <div className=''> {messengerbox}  </div>
+        <div className=''> {MenuBox}  </div>
+        <div className='absolute top-16 right-5'>{theLogOutButton} </div>
+      </div>
          
 
           

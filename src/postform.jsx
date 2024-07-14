@@ -43,6 +43,9 @@ const Postform = () => {
     }
   }
 
+let currentUserPosts = []
+
+
   let newPost = {
     id: 0,
     userId: currentUser.userId,
@@ -59,7 +62,9 @@ const Postform = () => {
   const handleSubmit = () => {
    
     setIsShowing((prev) => !prev);
+    currentUserPosts.push(newPost)
     localStorage.setItem("mypost", JSON.stringify(newPost))
+    window.location.reload()
     
     
     

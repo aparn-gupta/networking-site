@@ -103,7 +103,7 @@ function PrevArrow(props) {
   
   return (
     
-   <div className='w-2/5 mt-28'  > 
+   <div className='w-2/5 mt-20'  > 
 
 
 
@@ -193,6 +193,7 @@ function PrevArrow(props) {
   <div>
     <Indistory  key = {item.id} 
   userId = {item.userId}
+  text = {item.text}
   id = {item.id}  
   src = {item.src} 
   imagesrc = {item.imagesrc} 

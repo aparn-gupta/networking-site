@@ -7,14 +7,7 @@ export const userData = [
         pfpSrc: "https://i.pinimg.com/originals/a4/60/14/a46014e6b16f2b2b2d3c4cec127711ec.jpg",
         coverpicsrc: "https://th.bing.com/th/id/R.6876a7d9c77c21d84321b4260ab0fe13?rik=CoB48Ost6OpbVg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fb%2f6%2f0%2f1012101-ben-10-wallpapers-1920x1080-ios.jpg&ehk=OzX%2fSPh%2b9lQfg3qJIlHljDIW6NqqB2M8kCAtvBC6MlM%3d&risl=&pid=ImgRaw&r=0",
     },
-    {   password: "ReactBootstrap",
-        userId: 510,
-        id: 402,
-        username: "Abhishek Kumar",
-        friendsCount: 752,
-        pfpSrc: "https://media.licdn.com/dms/image/C4E03AQGdC0Vm6_gtYw/profile-displayphoto-shrink_400_400/0/1517590757105?e=1723680000&v=beta&t=3PScnPrWOlhFOEWri0rBhYjd_uSfQC6gk7WBUtfIBfs",
-        coverpicsrc: "https://wallpapertag.com/wallpaper/full/6/c/1/434699-popular-cute-kitten-wallpapers-2560x1440.jpg"
-    },
+  
     
     {   password: "abcd",
         userId: 505,
@@ -42,12 +35,12 @@ export const userData = [
         coverpicsrc: "https://wallpapercave.com/wp/T92H2Q1.jpg"
     },
     {  
-         password: "abcd",
+        password: "abcd",
         userId: 501,
         username: "Oswald",
         friendsCount: 324,
-        pfpSrc: "https://i.pinimg.com/736x/1c/ca/2c/1cca2ccdab4b424fd31f793ef0924af8.jpg",
-        coverpicsrc: "https://th.bing.com/th/id/OIP.JnxUlu2PR7Kuj-u9CojIZgHaEw?rs=1&pid=ImgDetMain"
+        pfpSrc: "https://resizing.flixster.com/fqvQSE1kziv_pUAHtjYZoS8M4sQ=/fit-in/1152x864/v2/https://flxt.tmsimg.com/assets/p458357_i_v9_aa.jpg",
+        coverpicsrc: "https://wallpapercave.com/wp/wp9577256.jpg"
     },
     { 
         password: "abcd",

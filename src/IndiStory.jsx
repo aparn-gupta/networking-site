@@ -9,11 +9,17 @@ import { useState } from "react";
 import { userData } from './userComponents/userData';
 import { useridContext } from './MainComponent';
 
+import { useNavigate } from "react-router-dom";
+
+
 
 
 
 
 const Indistory = (props) => {
+
+
+
 
   let currentUser = {}
   const [selfId, setSelfId] = React.useContext(useridContext)
@@ -26,6 +32,7 @@ const Indistory = (props) => {
       }
     }
 
+    
 
 
 
@@ -33,12 +40,15 @@ const Indistory = (props) => {
 
   const [showDeleteButton, setShowDeleteButton] = useState(false)
 
-
+  
   const deleteStory = () => {
 
       if (usersNewStory)  {
         localStorage.removeItem("newStory")
         window.location.reload()
+      
+      
+       
       }
   }
 
@@ -60,10 +70,11 @@ const Indistory = (props) => {
 
   return (
 
-     <div className='relative mr-2 rounded'   >  <Link to={`/stories/${props.id}`}  >  
+     <div className='relative mr-2 rounded'   >  <Link to={`/stories/${props.userId}`}  >  
     <div  className='absolute top-3 left-3 ' > <Link to={`/users/${props.userId}`} > <Avatar className=' ring-4 ring-pink-600 ' src= {props.src} />  </Link> </div>  <Link to={`/users/${props.userId}`}>  <p className=' absolute bottom-1.5 left-2 text-white font-bold text-sm'> {props.name}  </p> </Link>
-       {props.imagesrc &&  <img  className='h-64 w-36 rounded-xl'  id = {props.id}   src= {props.imagesrc} /> }   {props.url &&  <ReactPlayer   id = {props.id} width="144px" height="256px" url= {props.url}  /> }
-       </Link>         
+       {props.imagesrc &&  <img  className='xl:h-64 w-36 lg:h-48  rounded-xl'  id = {props.id}   src= {props.imagesrc} /> }   {props.url &&  <ReactPlayer   id = {props.id} width="144px" height="256px" url= {props.url}  /> }
+       </Link>  
+       <div className="absolute top-6 left-3 right-3 text-white font-bold text-xl italic"> {props.text}  </div>       
      {  usersNewStory &&  props.userId === selfId &&  <div className="absolute top-3 right-2 text-white">  <MoreVertIcon  onClick = {openMenu} />  </div>}
     <div className="absolute top-10 right-3">  {deleteButton} </div>
       

@@ -140,18 +140,18 @@ const [selfId, setSelfId] = React.useContext(useridContext)
 
   return (
     <shareformContext.Provider value={[showShareBox, setShowShareBox]}>
-    <div className='w-full  mx-3 p-4  rounded-2xl my-6 relative bg-white shadow-lg border-2 border-slate-200'>
+    <div className='w-full p-4  rounded-2xl my-6 relative bg-white shadow-lg border-2 border-slate-200'>
       {shareboxStyle}
         <Link to = {`/users/${props.userId}`} > <div className='flex'> <Avatar src={props.src} className='m-1' /> <div className='px-3 flex flex-col'> {props.name}   <div className='text-slate-500 text-xs' > {props.time} </div>   </div> </div>   </Link>
         <div className='py-3'> {props.text} </div>
 
         {  usersNewStory &&  props.userId === selfId &&  <div className="absolute top-5 right-4 text-black">  <MoreVertIcon  onClick = {openMenu} />  </div>}
-        <div className="absolute top-12 right-3">  {deleteButton} </div>
+      <Link to= "/" >   <div className="absolute top-12 right-3">  {deleteButton} </div> </Link>
 
         
         
        
-       { props.imagesrc && <div className='py-2'> <img className='w-full h-112' src= {props.imagesrc}/> </div>}
+       { props.imagesrc && <div className='py-2'> <img className='w-full xl:h-112  lg:h-96' src= {props.imagesrc}/> </div>}
         <div className='h-6 px-3 py-1 ' > <RecommendIcon className='text-blue-800'  /> {numberOfLikes}  </div>
         <div className='flex justify-between w-full h-10 px-2 py-4 mb-7 '>
            

@@ -12,6 +12,7 @@ import User from "./user";
 import { useState } from "react";
 import { userData } from "./userComponents/userData";
 import CreateStoryPage from "./CreateStoryPage";
+import { useEffect } from "react";
 
 
 export const useridContext = React.createContext()
@@ -20,6 +21,7 @@ export const useridContext = React.createContext()
 
 function MainComponent() { 
 
+ 
 
 
 
@@ -36,6 +38,27 @@ function MainComponent() {
   const formStyle = loggedin ? {display: "none"} : {display: "block"}
 
 
+  let userloggedin = JSON.parse(localStorage.getItem("userloggedin"))
+  let LoggedUserId = JSON.parse(localStorage.getItem("LoggedUserId"))
+
+  useEffect(() => {
+    if (userloggedin) {
+      setLoggedin(true)
+    }
+
+    if (LoggedUserId)  {
+      setSelfId(parseInt(LoggedUserId))
+
+    }
+
+
+
+  }, [] )
+
+
+
+
+
 
  
 
@@ -45,6 +68,7 @@ function MainComponent() {
       if (each.username === usernameInput) {
         setReqdUser(each)
         setSelfId(each.userId)
+        localStorage.setItem("LoggedUserId", JSON.stringify(selfId))
       }     
     }
 
@@ -55,7 +79,8 @@ function MainComponent() {
       setPasswordmatchMessage("Incorrect credentials")
     }
     else if (userpassword === reqdUser.password) {     
-      setLoggedin(prev => !prev)         
+      setLoggedin(prev => !prev)   
+      localStorage.setItem("userloggedin", "true")    
     } 
   }
 
@@ -82,7 +107,7 @@ function MainComponent() {
        <form >
        
         <label htmlFor='username' > Username </label>
-        <input className='w-60 h-8 border-2 p-1 border-slate-500 mb-4' name='username' placeholder = "Doctor Strange/Pikachu/Oswald" id = 'username' type='text' value={usernameInput} onChange={(e) => setUsernameInput(e.target.value) }  />
+        <input className='w-60 h-8 border-2 p-1 border-slate-500 mb-4' name='username' placeholder = "Doctor Strange//Oswald" id = 'username' type='text' value={usernameInput} onChange={(e) => setUsernameInput(e.target.value) }  />
         <br/>
         <label htmlFor='password'>Password </label>
         <input className='w-60 h-8 border-2 p-1 border-slate-500' placeholder = "abcd" name= 'password' id='password' type='password' value={userpassword} onChange={(e) => setUserPassword(e.target.value) }  />
@@ -121,7 +146,7 @@ function MainComponent() {
           <Route path="/market" element={<Market />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/gaming" element={<Gaming />} />
-          <Route path="/stories/:id" element={<Storypage />} />
+          <Route path="/stories/:userId" element={<Storypage />} />
           <Route path="/users/:userid" element={<User />} />
           <Route path="/stories/create" element={<CreateStoryPage />} />
           

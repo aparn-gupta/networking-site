@@ -126,30 +126,32 @@ const User = () => {
       <div className='h-144 relative'>
       <img className='w-full h-96 rounded-xl' src = {indiUser.coverpicsrc} />
 
-      <div className='flex '>  
-        <Avatar  sx = {{width: '12rem', height: '12rem'}} className='border-solid  border-4 border-white absolute bottom-10 left-11' src= {indiUser.pfpSrc}/> 
+      <div className='flex justify-between '>  
+      <div  className='flex'>
+      <Avatar  sx = {{width: '12rem', height: '12rem'}} className='border-solid  border-4 border-white absolute bottom-10 left-11' src= {indiUser.pfpSrc}/> 
 
-        <div className='ml-16 py-7 w-80'>           
-            <p className='text-3xl font-bold my-3'> {indiUser.username} </p>
-            <p className='text-lg text-slate-400 font-bold'> {indiUser.friendsCount} friends </p>
-        </div>
+<div className=' py-7  ml-16'>           
+    <p className='text-3xl font-bold my-3'> {indiUser.username} </p>
+    <p className='text-lg text-slate-400 font-bold'> {indiUser.friendsCount} friends </p>
+</div>
+      </div>
 
         { ownAcc &&  
         <div className='flex py-20 '>
-          <div className='mx-1'><Button variant='contained' sx={{ color: 'white', backgroundColor: 'blue', width: '9rem' }}> Add to story  </Button> </div>
-          <div className='mx-1'><Button variant='contained' sx={{ color: 'white', backgroundColor: 'rgb(162, 161, 161)', width: '9rem' }}> Edit Profile </Button> </div>
-          <div className='ml-1 mr-10'> <Button variant='contained' sx={{ color: 'white', backgroundColor: 'rgb(162, 161, 161)', width: '3rem' }}> ... </Button> </div>
+          <div className='mx-1'><Button variant='contained' sx={{ color: 'white', backgroundColor: 'blue' }}> Add story  </Button> </div>
+          <div className='mx-1'><Button variant='contained' sx={{ color: 'white', backgroundColor: 'rgb(162, 161, 161)' }}> Edit Profile </Button> </div>
+          <div className='ml-1 mr-2'> <Button variant='contained' sx={{ color: 'white', backgroundColor: 'rgb(162, 161, 161)' }}> ... </Button> </div>
         </div>
         }
 
         {!ownAcc && 
       <div className='flex py-20 '>
-        <div className='mx-1'><Button onClick={() => setMessengerBox(prev => !prev) } variant='contained' sx={{ color: 'white', backgroundColor: 'blue', width: '9rem' }}> Message </Button>
+        <div className='mx-1'><Button onClick={() => setMessengerBox(prev => !prev) } variant='contained' sx={{ color: 'white', backgroundColor: 'blue' }}> Message </Button>
        </div>
-        <div className='mx-1'><Button onClick={handleFriendsClick} variant='contained' sx={{ color: 'white', backgroundColor: 'rgb(162, 161, 161)', width: '9rem' }}> {buttontext} </Button>
+        <div className='mx-1'><Button onClick={handleFriendsClick} variant='contained' sx={{ color: 'white', backgroundColor: 'rgb(162, 161, 161)' }}> {buttontext} </Button>
         {friendtext}  </div>
        
-        <div className='ml-1 mr-10'> <Button variant='contained' sx={{ color: 'white', backgroundColor: 'rgb(162, 161, 161)', width: '3rem' }}> ... </Button> </div>
+        <div className='ml-1 mr-2'> <Button variant='contained' sx={{ color: 'white', backgroundColor: 'rgb(162, 161, 161)' }}> ... </Button> </div>
       </div> }
        
       </div>

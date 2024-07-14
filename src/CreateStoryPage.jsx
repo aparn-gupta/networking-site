@@ -78,11 +78,11 @@ const CreateStoryPage = () => {
 
 
         <div style={divStyle}>
-        <div   className='w-192 h-144 bg-slate-400 top-24 right-40 shadow-2xl fixed z-50'>    
+        <div   className='xl:w-208 lg:w-168 lg:right-28 h-144 bg-slate-400 top-24 xl:right-28 shadow-2xl fixed z-50'>    
        <div className=''> 
          <div className='w-72 h-96 relative'> 
          <img src={photoSrc} className='w-72 h-96 rounded-2xl fixed left-1/2 top-56'  />
-      <div className='absolute mx-64 my-44 flex justify-center w-64 '>  <p className=' text-3xl italic font-bold text-white  '> {usertext} </p>  </div> </div> 
+      <div className='absolute lg:mx-56  xl:mx-72 my-44 flex justify-center w-64 '>  <p className=' text-3xl italic font-bold text-white  '> {usertext} </p>  </div> </div> 
         </div>
        
         </div>

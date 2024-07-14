@@ -1,14 +1,14 @@
 const Storydata = [
 
-    { 
-    id: 101,
-    userId: 501,
-    src: "https://i.pinimg.com/736x/1c/ca/2c/1cca2ccdab4b424fd31f793ef0924af8.jpg",
-    imagesrc: "https://www.readersdigest.com.au/wp-content/uploads/2020/12/cat-lying-on-back-British-mackerel-shutterstock-e1573490045672-scaled.jpg",
-     name: "Oswald",
-     text: "Your only limit is your mind."
+    // { 
+    // id: 101,
+    // userId: 501,
+    // src: "https://i.pinimg.com/736x/1c/ca/2c/1cca2ccdab4b424fd31f793ef0924af8.jpg",
+    // imagesrc: "https://www.readersdigest.com.au/wp-content/uploads/2020/12/cat-lying-on-back-British-mackerel-shutterstock-e1573490045672-scaled.jpg",
+    //  name: "Oswald",
+    //  text: "Your only limit is your mind."
 
-    },
+    // },
     {    
         id: 102,
         userId: 502,
@@ -28,15 +28,15 @@ const Storydata = [
 
     },
  
-    {
-        id: 104,
-        userId: 504,
-        src: "https://img.ecartelera.com/noticias/58800/58846-m.jpg?v=2.0",
-        imagesrc: "https://flxt.tmsimg.com/assets/p12037541_b_v8_ay.jpg",
-        name: "Doctor Strange",
-         text: "Stay positive, work hard, and make it happen."
+    // {
+    //     id: 104,
+    //     userId: 504,
+    //     src: "https://img.ecartelera.com/noticias/58800/58846-m.jpg?v=2.0",
+    //     imagesrc: "https://flxt.tmsimg.com/assets/p12037541_b_v8_ay.jpg",
+    //     name: "Doctor Strange",
+    //      text: "Stay positive, work hard, and make it happen."
         
-    },
+    // },
     { 
         id: 105,
         userId: 505,

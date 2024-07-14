@@ -35,24 +35,27 @@ const Storypage = () => {
 //   }
 //  }  
 
-let storyplus = Storydata[Storydata.length - 1].id
-let storyminus = Storydata[0].id
+let storyplus = Storydata[Storydata.length - 1].userId
+let storyminus = Storydata[0].userId
 
 for (let i = 0; i < Storydata.length; i++) {
-  if (Storydata[i].id === parseInt(myId.id)) {
+  if (Storydata[i].userId === parseInt(myId.userId)) {
     reqdStory = Storydata[i]
+
+
+
 
 
     
 
-    if (parseInt(myId.id) !== Storydata[Storydata.length - 1].id ) {
-      storyplus = Storydata[i + 1].id
+    if (parseInt(myId.userId) !== Storydata[Storydata.length - 1].userId ) {
+      storyplus = Storydata[i + 1].userId
      }
     
 
 
-    if (parseInt(myId.id) !== Storydata[0].id ) {  
-      storyminus = Storydata[i - 1].id
+    if (parseInt(myId.userId) !== Storydata[0].userId ) {  
+      storyminus = Storydata[i - 1].userId
      }
     
 
@@ -70,6 +73,13 @@ const [selfId, setSelfId] = React.useContext(useridContext)
 
 
     }
+  }
+
+
+  if (parseInt(myId.userId) === parseInt(selfId)) {
+    reqdStory = usersNewStory
+    storyplus = Storydata[0].userId
+    storyminus = myId.userId
   }
 
 

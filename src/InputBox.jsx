@@ -52,7 +52,7 @@ const [selfId, setSelfId] = React.useContext(useridContext)
 
 
   return (    
-    <div className='m-3 p-4 bg-white rounded-xl shadow-lg border-2 border-slate-200' > 
+    <div className='xl:mt-12 p-4 bg-white rounded-xl shadow-lg border-2 border-slate-200' > 
     <formContext.Provider value={ [isShowing, setIsShowing] }>
     <div style={displayCreatePostForm}> <div className='screenbox'> <Postform />  </div>  </div>
     </formContext.Provider>

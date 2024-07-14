@@ -45,24 +45,24 @@ const postdata = [
    
     {  
         id: 5,
-        userId: 501,
-        src: "https://i.pinimg.com/736x/1c/ca/2c/1cca2ccdab4b424fd31f793ef0924af8.jpg",
-        name: "Oswald",
+        userId: 509,
+        src: "https://th.bing.com/th/id/OIP.jhNXeZxZcZabdwZbtkOgMAHaKZ?rs=1&pid=ImgDetMain",
+        name: "Gwen Tennyson",
         time: "07:07",
-        text: "Hello sunshine!",
-        imagesrc: "https://s-media-cache-ak0.pinimg.com/originals/37/72/d4/3772d4d0c25ec32a63a188c10f11a80b.png",
+        text: "Gotta get ready for the mission!!",
+        imagesrc: "https://images6.fanpop.com/image/photos/37100000/Gwen-Tennyson-ben-10-omniverse-37147657-926-862.jpg",
         likes: "152"
     },
-    {  
-        id: 6,
-        userId: 504,
-        src: "https://img.ecartelera.com/noticias/58800/58846-m.jpg?v=2.0",
-        name: "Doctor Strange",
-        time: "15:16",
-        text: "#SaveOurUniverse",
-        imagesrc: "https://img.ecartelera.com/noticias/33000/33064-m.jpg",
-        likes: "210"
-    },
+    // {  
+    //     id: 6,
+    //     userId: 504,
+    //     src: "https://img.ecartelera.com/noticias/58800/58846-m.jpg?v=2.0",
+    //     name: "Doctor Strange",
+    //     time: "15:16",
+    //     text: "#SaveOurUniverse",
+    //     imagesrc: "https://img.ecartelera.com/noticias/33000/33064-m.jpg",
+    //     likes: "210"
+    // },
     {
         id: 7,
         userId: 508,
