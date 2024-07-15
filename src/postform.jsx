@@ -45,13 +45,16 @@ const Postform = () => {
 
 let currentUserPosts = []
 
+let now = new Date()
+
+
 
   let newPost = {
     id: 0,
     userId: currentUser.userId,
     src: currentUser.pfpSrc,
     name: currentUser.username,
-    time: "15:30",
+    time: now.toUTCString(),
     text: createPostText,
     imagesrc: userImage,
     likes: 0

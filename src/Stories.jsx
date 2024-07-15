@@ -193,6 +193,7 @@ function PrevArrow(props) {
   <div>
     <Indistory  key = {item.id} 
   userId = {item.userId}
+ 
   text = {item.text}
   id = {item.id}  
   src = {item.src} 
@@ -223,6 +224,7 @@ function PrevArrow(props) {
      <Post 
      key = {usersNewPost.id}
      userId = {usersNewPost.userId}
+     feeling = {usersNewPost.feeling}
      src= {usersNewPost.src}
      name = {usersNewPost.name}
      time = {usersNewPost.time}

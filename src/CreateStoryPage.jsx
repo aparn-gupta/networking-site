@@ -82,7 +82,7 @@ const CreateStoryPage = () => {
        <div className=''> 
          <div className='w-72 h-96 relative'> 
          <img src={photoSrc} className='w-72 h-96 rounded-2xl fixed left-1/2 top-56'  />
-      <div className='absolute lg:mx-56  xl:mx-72 my-44 flex justify-center w-64 '>  <p className=' text-3xl italic font-bold text-white  '> {usertext} </p>  </div> </div> 
+      <div className='absolute lg:mx-56  xl:mx-72 my-56 flex justify-center w-64 '>  <p className=' text-3xl italic font-bold text-white  '> {usertext} </p>  </div> </div> 
         </div>
        
         </div>
@@ -91,7 +91,7 @@ const CreateStoryPage = () => {
           <div className=' absolute top-24 left-20'>
             <label htmlFor='addtext'className='font-bold text-lg' > Add Text</label>
             <br/>
-            <input className='w-72 h-56 mt-6 p-8 border-black border-2'  id='addtext' name='addtext' value={usertext} onChange={handleChange} placeholder='' />
+            <input className='w-72 h-56 mt-6 p-8 border-black border-2' maxLength= '70'  id='addtext' name='addtext' value={usertext} onChange={handleChange} placeholder='' />
             <br />
            <Link to= "/">  <button  onClick={handleSubmit} className='w-24 h-12 bg-pink-600 mt-12 text-white font-bold'> Post </button> </Link>
           </div>

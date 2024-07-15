@@ -37,6 +37,8 @@ export const shareformContext = React.createContext()
 
 const Post = (props) => {
 
+  let usersNewPost =  JSON.parse(localStorage.getItem("mypost"))
+
 const [liked, setLiked]  = useState(false)
 
 const [showCommentBox, setShowCommentBox] = useState(false)
@@ -142,7 +144,35 @@ const [selfId, setSelfId] = React.useContext(useridContext)
     <shareformContext.Provider value={[showShareBox, setShowShareBox]}>
     <div className='w-full p-4  rounded-2xl my-6 relative bg-white shadow-lg border-2 border-slate-200'>
       {shareboxStyle}
-        <Link to = {`/users/${props.userId}`} > <div className='flex'> <Avatar src={props.src} className='m-1' /> <div className='px-3 flex flex-col'> {props.name}   <div className='text-slate-500 text-xs' > {props.time} </div>   </div> </div>   </Link>
+      {parseInt(selfId) === props.userId && usersNewPost.feeling &&
+          <Link to = {`/users/${props.userId}`} > <div className='flex'> <Avatar src={props.src} className='m-1' /> <div className='px-3 font-bold'> {props.name} is feeling <span className='text-orange-400 font-bold mx-0.5 capitalize'>   {props.feeling} </span>today! 
+          
+          <div className='flex justify-center mt-2 '>  </div>          
+            
+             <div className='text-slate-500 text-xs' > {props.time} </div>   </div> </div>   </Link>
+
+             
+      }
+
+
+      
+              { parseInt(selfId) === props.userId && usersNewPost && !usersNewPost.feeling &&
+                   <Link to = {`/users/${props.userId}`} > <div className='flex'> <Avatar src={props.src} className='m-1' /> <div className='px-3 font-bold'> {props.name}  <div className='flex justify-center mt-2 '>  </div>          
+               
+                <div className='text-slate-500 text-xs' > {props.time} </div>   </div> </div>   </Link>
+           }
+
+
+
+           { parseInt(selfId) !== props.userId &&   
+                   <Link to = {`/users/${props.userId}`} > <div className='flex'> <Avatar src={props.src} className='m-1' /> <div className='px-3 font-bold'> {props.name}  <div className='flex justify-center mt-2 '>  </div>          
+               
+                <div className='text-slate-500 text-xs' > {props.time} </div>   </div> </div>   </Link>
+           }
+
+
+
+           
         <div className='py-3'> {props.text} </div>
 
         {  usersNewStory &&  props.userId === selfId &&  <div className="absolute top-5 right-4 text-black">  <MoreVertIcon  onClick = {openMenu} />  </div>}

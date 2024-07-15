@@ -83,7 +83,8 @@ const emotions = ["happy", "sad", "enthusiastic", "disgusted", "excited", "angry
             <div className=' flex justify-center'>
             <div>
             { emotions.map(item => 
-                 <div className='w-56 flex justify-between'> <label htmlFor = 'emotions' className='capitalize'  >  {item} </label> <input  onChange={() => setSelectedEmotion(item) }   type='radio' id= 'emotions' name = 'emotions' className='w-4 h-4' /></div>
+                
+                 <div className='w-56 flex justify-between'> <label htmlFor = 'emotions' className='capitalize' key= {item} >  {item} </label> <input  onChange={() => setSelectedEmotion(item) }   type='radio' id= 'emotions' name = 'emotions' className='w-4 h-4' /></div>
              )}
             </div>
             </div>
